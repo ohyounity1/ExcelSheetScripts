@@ -1,6 +1,6 @@
 import xlrd 
 
-from lib.Excel import Constants
+from lib.Constants import Constants
 from lib.Excel import Column
 from lib.ErrorCodes import ErrorCode
 
@@ -27,9 +27,8 @@ def ExcelSheetErrorCodeListing(fileName, output):
                 if(errorCodeName[len(errorCodeName)-1] == ',') :
                     errorCodeName = errorCodeName[0:len(errorCodeName)-1]
                 totalErrorCodes = totalErrorCodes + 1
-                errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, '<Module?>', errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
+                errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, Constants.UnknownModuleType, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
                 allErrorCodes.append(errorCode)
         
         output.Verbose(Out.VerbosityLow, 'Total Error Code Count: {} from {}'.format(len(allErrorCodes), fileName))
-        
         return allErrorCodes

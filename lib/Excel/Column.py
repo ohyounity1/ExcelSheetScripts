@@ -4,7 +4,7 @@ ErrorCodeTypeHeader = 'Error Type'
 ErrorCodeDisplaysMsgHeader = 'SW User Message'
 ErrorCodeDisplayMsgHeader = 'User message'
 
-from . import Constants
+from ..Constants import Constants
 from ..Output import Out
 def DefineKnownColumnLocations(sheet, output):
     errorNameCol = None

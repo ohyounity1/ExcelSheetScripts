@@ -1,108 +1,99 @@
 import sys
 import argparse
 
-from lib.Output import Out
+from lib.Constants import Constants
+from lib.Constants import SourceTypes
+from lib.Utility import Utility
 
-from lib.ErrorCodes import ErrorCode    
+def RetrieveSource(filePath, output):
+    from pathlib import Path
+    import ExcelConversion
+    import JsonConversion
+
+    if(Path(filePath).suffix in Constants.SupportedExcelExtensions):
+        return ExcelConversion.ExcelSheetErrorCodeListing(filePath, output), SourceTypes.SourceType.EXCEL
+    elif(Path(filePath).suffix in Constants.SupportedJsonExtensions):
+        return JsonConversion.JsonFileErrorCodeListing(filePath, output), SourceTypes.SourceType.JSON
+
+def AddSelection(desiredSelection, selectedOrder, selectedItems):
+    if(desiredSelection in selectedItems):
+        selectedOrder.append(desiredSelection)
+        
+def ErrorCodeTableDisplay(errorCodes, sourceType, output):
+    import TableDisplay
+    
+    selectionOfItems = Utility.IntrospectErrorCodes(errorCodes)
+    selectedOrder = []
+    
+    AddSelection('ErrorName', selectedOrder, selectionOfItems)
+    AddSelection('ErrorId', selectedOrder, selectionOfItems)
+    AddSelection('ErrorModule', selectedOrder, selectionOfItems)
+    AddSelection('ErrorType', selectedOrder, selectionOfItems)
+    AddSelection('ErrorDisplaysMsg', selectedOrder, selectionOfItems)
+    AddSelection('ErrorDisplayMsg', selectedOrder, selectionOfItems)
+        
+    if(sourceType == SourceTypes.SourceType.EXCEL):
+        selectedOrder.remove('ErrorModule')
+    elif(sourceType == SourceTypes.SourceType.JSON):
+        selectedOrder.remove('ErrorId')
+    
+    output.Verbose(Out.VerbosityMedium, 'Items selected for display {}'.format(selectedOrder))
+    
+    TableDisplay.TableDisplay(errorCodes, selectedOrder)
+    
+def ParseCommandLine(output):
+    parser = argparse.ArgumentParser(description='Retrieve data from Instrument Error Codes Spreadsheets!')
+    parser.add_argument('-s', '--source', dest='Source', help='Source file name.  If .xls or .xlsx treated as Excel, .json treated as JSON', nargs='+', required=True)
+    parser.add_argument('-v', '--verbose', dest='Verbosity', help='Verbosity level.  Repeat for higher level... e.g. -vv will print with Medium Verbosity', action='count', default=0)
+
+    parser.add_argument('-d', '--destination', help='Destination file name.  If .xls or .xlsx treated as Excel, .json treated as JSON, prompt prints to prompt, Null for no output', default='Prompt')
+
+    arguments = parser.parse_args()
+    
+    if(len(arguments.Source) > Constants.MaxSourceArguments):
+        output.Error('Too many source arguments!  Only {} are allowed...'.format(Constants.MaxSourceArguments))
+    
+    if(len(arguments.Source) > 1 and arguments.Source[0] == arguments.Source[1]):
+        output.Error('Error!  Source files are the same name! {}'.format(arguments.Source[0]))
+
+    return arguments
+    
+from lib.Output import Out
 
 output = Out.Out()
 
-parser = argparse.ArgumentParser(description='Retrieve data from Instrument Error Codes Spreadsheets!')
-parser.add_argument('-s', '--source', dest='Source', help='Source file name.  If .xls or .xlsx treated as Excel, .json treated as JSON', nargs='+', required=True)
-parser.add_argument('-v', '--verbose', dest='Verbosity', help='Verbosity level.  Repeat for higher level... e.g. -vv will print with Medium Verbosity', action='count', default=0)
-
-parser.add_argument('-d', '--destination', help='Destination file name.  If .xls or .xlsx treated as Excel, .json treated as JSON, prompt prints to prompt', default='Prompt')
-
-arguments = parser.parse_args()
-
-if(len(arguments.Source) > 2):
-    output.Error('Too many source arguments!  Only 2 are allowed...')
-    
-if(len(arguments.Source) > 1 and arguments.Source[0] == arguments.Source[1]):
-    output.Error('Error!  Source files are the same name! {}'.format(arguments.Source[0]))
+arguments = ParseCommandLine(output)
 
 output.Verbosity = arguments.Verbosity
 output.Verbose(Out.VerbosityMedium, 'Input files {0}'.format(arguments.Source))
 
-from pathlib import Path
-
-errorCodeListing1 = None
-errorCodeListing2 = None
-
-import ExcelConversion
-import JsonConversion
-
-errorCodeListing1 = None
-errorCodeListing2 = None
-
 mainSourceFile = arguments.Source[0]
-mainSourceExcelSource = False
 
-# Source 1 is from Excel, convert from Excel to error code list
-if(Path(mainSourceFile).suffix == '.xls' or Path(mainSourceFile).suffix == '.xlsx'):
-    errorCodeListing1 = ExcelConversion.ExcelSheetErrorCodeListing(mainSourceFile, output)
-    mainSourceExcelSource = True
+output.Verbose(Out.VerbosityLow, 'Primary Source File Name: {0}'.format(mainSourceFile))
 
-if(errorCodeListing1 is None):
+mainSourceResults, mainSourceType = RetrieveSource(mainSourceFile, output)
+
+if(mainSourceResults is None):
     output.Error('There were no error codes found in {}!'.format(mainSourceFile))
-        
+    
 # We have a secondary source file
 if(len(arguments.Source) > 1):
     secondarySourceFile = arguments.Source[1]
     
-    if(Path(secondarySourceFile).suffix == '.xls' or Path(secondarySourceFile).suffix == '.xlsx'):
-        errorCodeListing2 = ExcelConversion.ExcelSheetErrorCodeListing(secondarySourceFile, output)
-    elif(Path(secondarySourceFile).suffix == '.json'):
-        errorCodeListing2 = JsonConversion.JsonFileErrorCodeListing(secondarySourceFile, output)
+    output.Verbose(Out.VerbosityLow, 'Secondary Source File Name: {0}'.format(secondarySourceFile))
+    
+    secondarySourceResults, secondarySourceType = RetrieveSource(secondarySourceFile, output)
 
-    if(errorCodeListing2 is None):
+    if(secondarySourceResults is None):
         output.Error('There were no error codes found in {}!'.format(secondarySourceFile))
     
-
+if(arguments.destination == 'Null'):
+    exit()
+    
 if(arguments.destination == 'Prompt'):
-    import TableDisplay
+    print('Main Source Display {}'.format(mainSourceFile))
+    ErrorCodeTableDisplay(mainSourceResults, mainSourceType, output)
     
-    selectionOfItems = [x for x in dir(errorCodeListing1[0]) if (x.startswith('__') == False) if (x.endswith('__') == False)]
-    print(selectionOfItems)
-    if(mainSourceExcelSource):
-        selectionOfItems.remove('ErrorModule')
-
-    TableDisplay.TableDisplay(errorCodeListing1, selectionOfItems)
-    
-"""
-    tabularFormat = [ ]
-    largestColumns = [0,0,0,0,0]
-    headers = []
-    for header in vars(errorCodeListing1[0]):
-        headers.append(header)
-    
-    tabularFormat.append(headers)
-    for ec in errorCodeListing1:
-        if(len(ec.ErrorDisplayMsg) > 0):
-            tabularFormat.append([ec.ErrorName, ec.ErrorId, ec.ErrorType, ec.ErrorDisplaysMsg, '{}...'.format(ec.ErrorDisplayMsg[0:30])])
-        else:
-            tabularFormat.append([ec.ErrorName, ec.ErrorId, ec.ErrorType, ec.ErrorDisplaysMsg, ''])
-        larger = max(len(ec.ErrorName), len(headers[0]))
-        if(larger > largestColumns[0]):
-            largestColumns[0] = larger + 1
-        larger = max(len(str(ec.ErrorId)), len(headers[1]))
-        if(larger > largestColumns[1]):
-            largestColumns[1] = larger + 1
-        larger = max(len(ec.ErrorType), len(headers[2]))
-        if(larger > largestColumns[2]):
-            largestColumns[2] = larger + 1
-        larger = max(len(str(ec.ErrorDisplaysMsg)), len(headers[3]))
-        if(larger > largestColumns[3]):
-            largestColumns[3] = larger + 1
-        larger = max(len(str(ec.ErrorDisplayMsg[0:30]))+3, len(headers[4]))
-        if(larger > largestColumns[4]):
-            largestColumns[4] = larger + 1
-    
-    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]),  '-' * (largestColumns[2]),  '-' * (largestColumns[3]),  '-' * (largestColumns[4])))
-    print('%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c'.format(largestColumns[0], largestColumns[1], largestColumns[2], largestColumns[3], largestColumns[4]) % ('|', headers[0], '|', headers[1], '|', headers[2], '|', headers[3], '|', headers[4], '|'))
-    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]), '-' * (largestColumns[2]), '-' * (largestColumns[3]), '-' * (largestColumns[4])))
-    for ec in tabularFormat:
-        print('%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c'.format(largestColumns[0], largestColumns[1], largestColumns[2], largestColumns[3], largestColumns[4]) % ('|', ec[0], '|', ec[1], '|', ec[2], '|', ec[3], '|', ec[4], '|'))
-    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]), '-' * (largestColumns[2]), '-' * (largestColumns[3]), '-' * (largestColumns[4])))
-"""
-    
+    if(secondarySourceResults is not None):
+        print('Secondary Source Display {}'.format(secondarySourceFile))
+        ErrorCodeTableDisplay(secondarySourceResults, secondarySourceType, output)
