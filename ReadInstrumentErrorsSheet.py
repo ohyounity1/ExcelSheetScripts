@@ -1,49 +1,18 @@
-def ExcelSheetErrorCodeListing(fileName):
-    import xlrd 
-
-    from lib.Excel import Constants
-    from lib.Excel import Column
-    from lib.ErrorCodes import ErrorCode
-    
-    # To open Workbook 
-    with xlrd.open_workbook(fileName) as book:
-        sheet = book.sheet_by_index(Constants.ErrorSheet) 
-    
-        allErrorCodes = []
-    
-        totalErrorCodes = 0
-        
-        colPositions = Column.DefineKnownColumnLocations(sheet, output)
-        
-        for i in range(1, sheet.nrows):
-            errorCodeName = sheet.cell_value(i, colPositions[0])
-            errorCodeId = sheet.cell_value(i, colPositions[1])
-            errorCodeType = sheet.cell_value(i, colPositions[2])
-            errorCodeDisplaysMsg = sheet.cell_value(i, colPositions[3])
-            errorCodeDisplayMsg = sheet.cell_value(i, colPositions[4])
-            if(errorCodeName != '' and errorCodeName[0] != '/'):
-                if(errorCodeName[len(errorCodeName)-1] == ',') :
-                    errorCodeName = errorCodeName[0:len(errorCodeName)-1]
-                totalErrorCodes = totalErrorCodes + 1
-                errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
-                allErrorCodes.append(errorCode)
-        
-        output.Verbose(Out.VerbosityLow, 'Total Error Code Count: {} from {}'.format(len(allErrorCodes), fileName))
-        
-        return allErrorCodes
-
 import sys
 import argparse
 
 from lib.Output import Out
+from lib.Output import Table
+
+from lib.ErrorCodes import ErrorCode    
 
 output = Out.Out()
 
 parser = argparse.ArgumentParser(description='Retrieve data from Instrument Error Codes Spreadsheets!')
-parser.add_argument('-s', '--source', dest='Source', help='Source file name', nargs='+', required=True)
-parser.add_argument('-v', '--verbose', dest='Verbosity', help='Verbosity level', action='count', default=0)
+parser.add_argument('-s', '--source', dest='Source', help='Source file name.  If .xls or .xlsx treated as Excel, .json treated as JSON', nargs='+', required=True)
+parser.add_argument('-v', '--verbose', dest='Verbosity', help='Verbosity level.  Repeat for higher level... e.g. -vv will print with Medium Verbosity', action='count', default=0)
 
-#parser.add_argument('-d', '--destination', help'Destination file name', required=True)
+parser.add_argument('-d', '--destination', help='Destination file name.  If .xls or .xlsx treated as Excel, .json treated as JSON, prompt prints to prompt', default='Prompt')
 
 arguments = parser.parse_args()
 
@@ -61,5 +30,51 @@ from pathlib import Path
 errorCodeListing1 = None
 errorCodeListing2 = None
 
-if(Path(arguments.Source[0]).suffix == '.xls' or Path(arguments.Source[0]).suffix == '.xlsx'):
-    errorCodeListing1 = ExcelSheetErrorCodeListing(arguments.Source[0])
+import ExcelConversion
+
+errorCodeListing1 = None
+
+mainSourceFile = arguments.Source[0]
+
+if(Path(mainSourceFile).suffix == '.xls' or Path(mainSourceFile).suffix == '.xlsx'):
+    errorCodeListing1 = ExcelConversion.ExcelSheetErrorCodeListing(mainSourceFile, output)
+
+if(errorCodeListing1 is None):
+    output.Error('There were no error codes found in {}!'.format(mainSourceFile))
+    
+if(arguments.destination == 'Prompt'):
+    tabularFormat = [ ]
+    largestColumns = [0,0,0,0,0]
+    headers = []
+    for header in vars(errorCodeListing1[0]):
+        headers.append(header)
+    
+    tabularFormat.append(headers)
+    for ec in errorCodeListing1:
+        if(len(ec.ErrorDisplayMsg) > 0):
+            tabularFormat.append([ec.ErrorName, ec.ErrorId, ec.ErrorType, ec.ErrorDisplaysMsg, '{}...'.format(ec.ErrorDisplayMsg[0:30])])
+        else:
+            tabularFormat.append([ec.ErrorName, ec.ErrorId, ec.ErrorType, ec.ErrorDisplaysMsg, ''])
+        larger = max(len(ec.ErrorName), len(headers[0]))
+        if(larger > largestColumns[0]):
+            largestColumns[0] = larger + 1
+        larger = max(len(str(ec.ErrorId)), len(headers[1]))
+        if(larger > largestColumns[1]):
+            largestColumns[1] = larger + 1
+        larger = max(len(ec.ErrorType), len(headers[2]))
+        if(larger > largestColumns[2]):
+            largestColumns[2] = larger + 1
+        larger = max(len(str(ec.ErrorDisplaysMsg)), len(headers[3]))
+        if(larger > largestColumns[3]):
+            largestColumns[3] = larger + 1
+        larger = max(len(str(ec.ErrorDisplayMsg[0:30]))+3, len(headers[4]))
+        if(larger > largestColumns[4]):
+            largestColumns[4] = larger + 1
+    
+    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]),  '-' * (largestColumns[2]),  '-' * (largestColumns[3]),  '-' * (largestColumns[4])))
+    print('%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c'.format(largestColumns[0], largestColumns[1], largestColumns[2], largestColumns[3], largestColumns[4]) % ('|', headers[0], '|', headers[1], '|', headers[2], '|', headers[3], '|', headers[4], '|'))
+    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]), '-' * (largestColumns[2]), '-' * (largestColumns[3]), '-' * (largestColumns[4])))
+    for ec in tabularFormat:
+        print('%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c'.format(largestColumns[0], largestColumns[1], largestColumns[2], largestColumns[3], largestColumns[4]) % ('|', ec[0], '|', ec[1], '|', ec[2], '|', ec[3], '|', ec[4], '|'))
+    print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]), '-' * (largestColumns[2]), '-' * (largestColumns[3]), '-' * (largestColumns[4])))
+    
