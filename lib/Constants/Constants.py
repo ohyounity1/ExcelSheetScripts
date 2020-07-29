@@ -18,3 +18,10 @@ SupportedJsonExtensions = [ '.json' ]
 UnknownModuleType = '<Module?>'
 
 PrivatePropertySuffix = '__'
+
+ErrorNameProperty = 'ErrorName'
+ErrorIdProperty = 'ErrorId'
+ErrorModuleProperty = 'ErrorModule'
+ErrorTypeProperty = 'ErrorType'
+ErrorDisplaysMsgProperty = 'ErrorDisplaysMsg'
+ErrorDisplayMsgProperty = 'ErrorDisplayMsg'

@@ -3,6 +3,7 @@ import argparse
 
 from lib.Constants import Constants
 from lib.Constants import SourceTypes
+from lib.Constants import ActionTypes
 from lib.Utility import Utility
 
 def RetrieveSource(filePath, output):
@@ -25,21 +26,21 @@ def ErrorCodeTableDisplay(errorCodes, sourceType, output):
     selectionOfItems = Utility.IntrospectErrorCodes(errorCodes)
     selectedOrder = []
     
-    AddSelection('ErrorName', selectedOrder, selectionOfItems)
-    AddSelection('ErrorId', selectedOrder, selectionOfItems)
-    AddSelection('ErrorModule', selectedOrder, selectionOfItems)
-    AddSelection('ErrorType', selectedOrder, selectionOfItems)
-    AddSelection('ErrorDisplaysMsg', selectedOrder, selectionOfItems)
-    AddSelection('ErrorDisplayMsg', selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorNameProperty, selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorIdProperty, selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorModuleProperty, selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorTypeProperty, selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorDisplaysMsgProperty, selectedOrder, selectionOfItems)
+    AddSelection(Constants.ErrorDisplayMsgProperty, selectedOrder, selectionOfItems)
         
     if(sourceType == SourceTypes.SourceType.EXCEL):
-        selectedOrder.remove('ErrorModule')
+        selectedOrder.remove(Constants.ErrorModuleProperty)
     elif(sourceType == SourceTypes.SourceType.JSON):
-        selectedOrder.remove('ErrorId')
+        selectedOrder.remove(Constants.ErrorIdProperty)
     
     output.Verbose(Out.VerbosityMedium, 'Items selected for display {}'.format(selectedOrder))
     
-    TableDisplay.TableDisplay(errorCodes, selectedOrder)
+    TableDisplay.ErrorListToTableDisplay(errorCodes, selectedOrder)
     
 def ParseCommandLine(output):
     parser = argparse.ArgumentParser(description='Retrieve data from Instrument Error Codes Spreadsheets!')
@@ -57,6 +58,8 @@ def ParseCommandLine(output):
         output.Error('Error!  Source files are the same name! {}'.format(arguments.Source[0]))
 
     return arguments
+    
+
     
 from lib.Output import Out
 
@@ -76,8 +79,11 @@ mainSourceResults, mainSourceType = RetrieveSource(mainSourceFile, output)
 if(mainSourceResults is None):
     output.Error('There were no error codes found in {}!'.format(mainSourceFile))
     
+actionType = None
+
 # We have a secondary source file
 if(len(arguments.Source) > 1):
+
     secondarySourceFile = arguments.Source[1]
     
     output.Verbose(Out.VerbosityLow, 'Secondary Source File Name: {0}'.format(secondarySourceFile))
@@ -86,6 +92,8 @@ if(len(arguments.Source) > 1):
 
     if(secondarySourceResults is None):
         output.Error('There were no error codes found in {}!'.format(secondarySourceFile))
+        
+    actionType = ActionTypes.ActionType.DIFF
     
 if(arguments.destination == 'Null'):
     exit()
@@ -97,3 +105,8 @@ if(arguments.destination == 'Prompt'):
     if(secondarySourceResults is not None):
         print('Secondary Source Display {}'.format(secondarySourceFile))
         ErrorCodeTableDisplay(secondarySourceResults, secondarySourceType, output)
+        
+
+if(actionType == ActionTypes.ActionType.DIFF):
+    import DiffAction
+    DiffAction.ActionDiffOnErrorLists(mainSourceResults, mainSourceFile, secondarySourceResults, secondarySourceFile)

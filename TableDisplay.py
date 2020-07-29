@@ -1,4 +1,5 @@
 from lib.Utility import Utility
+from lib.Constants import Constants
 
 def PrintBorder(largestColumns):
     formatArgs = []
@@ -35,7 +36,7 @@ def ConvertDisplayMsg(name, data):
             displayMsg = data
         
         return displayMsg
-    elif(name == 'ErrorDisplaysMsg' or name == 'ErrorId'):
+    elif(name == Constants.ErrorDisplaysMsgProperty or name == Constants.ErrorIdProperty):
         return str(data)
     return data
 
@@ -49,7 +50,7 @@ def Action(columnName, errorCode, dataConverter, largestColumns, dataRow, curren
     dataRow.append(columnData)
     currentColumnCounter[0] = currentColumn + 1
         
-def TableDisplay(errorList, selections):
+def ErrorListToTableDisplay(errorList, selections):
     tabularFormat = [ ]
     largestColumns = []
     headers = []
@@ -68,52 +69,6 @@ def TableDisplay(errorList, selections):
         for header in headers:
             Action(header, ec, ConvertDisplayMsg, largestColumns, dataRow, currentColumnCounter)
 
-#        if('ErrorName' in headers):
-#            larger = max(len(ec.ErrorName), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            currentColumn += 1
-#            dataRow.append(ec.ErrorName)
-#            
-#        if('ErrorId' in headers):
-#            larger = max(len(str(ec.ErrorId)), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            currentColumn += 1
-#            dataRow.append(ec.ErrorId)
-#        
-#        if('ErrorModule' in headers):
-#            larger = max(len(str(ec.ErrorModule)), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            currentColumn += 1
-#            dataRow.append(ec.ErrorModule)
-#            
-#        if('ErrorType' in headers):
-#            larger = max(len(ec.ErrorType), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            currentColumn += 1
-#            dataRow.append(ec.ErrorType)
-#            
-#        if('ErrorDisplaysMsg' in headers):
-#            larger = max(len(str(ec.ErrorDisplaysMsg)), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            currentColumn += 1
-#            dataRow.append(ec.ErrorDisplaysMsg)
-#            
-#        if('ErrorDisplayMsg' in headers):
-#            displayMsg = ''
-#            if(len(ec.ErrorDisplayMsg) > 30):
-#                displayMsg = '{}...'.format(ec.ErrorDisplayMsg[0:30])
-#            elif(len(ec.ErrorDisplayMsg) > 0):
-#                displayMsg = ec.ErrorDisplayMsg
-#            larger = max(len(displayMsg), len(headers[currentColumn]))
-#            if(larger > largestColumns[currentColumn]):
-#                largestColumns[currentColumn] = larger + 1
-#            dataRow.append(displayMsg)
-            
         tabularFormat.append(dataRow)
 
     PrintBorder(largestColumns)
