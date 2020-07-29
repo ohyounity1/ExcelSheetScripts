@@ -2,7 +2,6 @@ import sys
 import argparse
 
 from lib.Output import Out
-from lib.Output import Table
 
 from lib.ErrorCodes import ErrorCode    
 
@@ -31,18 +30,46 @@ errorCodeListing1 = None
 errorCodeListing2 = None
 
 import ExcelConversion
+import JsonConversion
 
 errorCodeListing1 = None
+errorCodeListing2 = None
 
 mainSourceFile = arguments.Source[0]
+mainSourceExcelSource = False
 
+# Source 1 is from Excel, convert from Excel to error code list
 if(Path(mainSourceFile).suffix == '.xls' or Path(mainSourceFile).suffix == '.xlsx'):
     errorCodeListing1 = ExcelConversion.ExcelSheetErrorCodeListing(mainSourceFile, output)
+    mainSourceExcelSource = True
 
 if(errorCodeListing1 is None):
     output.Error('There were no error codes found in {}!'.format(mainSourceFile))
+        
+# We have a secondary source file
+if(len(arguments.Source) > 1):
+    secondarySourceFile = arguments.Source[1]
     
+    if(Path(secondarySourceFile).suffix == '.xls' or Path(secondarySourceFile).suffix == '.xlsx'):
+        errorCodeListing2 = ExcelConversion.ExcelSheetErrorCodeListing(secondarySourceFile, output)
+    elif(Path(secondarySourceFile).suffix == '.json'):
+        errorCodeListing2 = JsonConversion.JsonFileErrorCodeListing(secondarySourceFile, output)
+
+    if(errorCodeListing2 is None):
+        output.Error('There were no error codes found in {}!'.format(secondarySourceFile))
+    
+
 if(arguments.destination == 'Prompt'):
+    import TableDisplay
+    
+    selectionOfItems = [x for x in dir(errorCodeListing1[0]) if (x.startswith('__') == False) if (x.endswith('__') == False)]
+    print(selectionOfItems)
+    if(mainSourceExcelSource):
+        selectionOfItems.remove('ErrorModule')
+
+    TableDisplay.TableDisplay(errorCodeListing1, selectionOfItems)
+    
+"""
     tabularFormat = [ ]
     largestColumns = [0,0,0,0,0]
     headers = []
@@ -77,4 +104,5 @@ if(arguments.destination == 'Prompt'):
     for ec in tabularFormat:
         print('%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c%-{}s%c'.format(largestColumns[0], largestColumns[1], largestColumns[2], largestColumns[3], largestColumns[4]) % ('|', ec[0], '|', ec[1], '|', ec[2], '|', ec[3], '|', ec[4], '|'))
     print('|{}|{}|{}|{}|{}|'.format('-' * (largestColumns[0]), '-' * (largestColumns[1]), '-' * (largestColumns[2]), '-' * (largestColumns[3]), '-' * (largestColumns[4])))
+"""
     

@@ -1,0 +1,4283 @@
+{
+	"Header": {
+		"GUID": "bac0200b-2e0b-4c0c-ac01-63927ed01eff",
+		"Tag": "DNA2InstrumentErrorCodes",
+		"Description": "DNA2 Instrument Errors",
+		"HeaderSerializeVersion": 3,
+		"CreatedFullyQualifiedName": "",
+		"CreatedVersion": 2,
+		"CreatedDate": " 2018-04-30T16:09:23-07:00",
+		"CreatedByAppEdition": "ResearchEmbedded",
+		"CreatedByAppName": "QuantaSoft™ 2.0",
+		"CreatedByAppVersion": "2.0.0",
+		"CreatedByDataAcqName": "QuantaSoft™ 2.0",
+		"CreatedByDataAcqVersion": "2.0.0",
+		"CreatedByUser": "\\BRR&D",
+		"CreatedByComputerName": "USPLEJY1SN32",
+		"CreatedByOperatingSystemVersion": "Microsoft Windows 10 Enterprise ; 10.0.14393",
+		"ModifiedFullyQualifiedName": "",
+		"ModifiedVersion": 2,
+		"ModifiedDate": " 2018-04-30T16:09:23-07:00",
+		"ModifiedByAppEdition": "ResearchEmbedded",
+		"ModifiedByAppName": "QuantaSoft™ 2.0",
+		"ModifiedByAppVersion": "2.0.0",
+		"ModifiedByDataAcqName": "QuantaSoft™ 2.0",
+		"ModifiedByDataAcqVersion": "2.0.0",
+		"ModifiedByUserName": "\\BRR&D",
+		"ModifiedByComputerName": "USPLEJY1SN32",
+		"ModifiedByOperatingSystemVersion": "Microsoft Windows 10 Enterprise ; 10.0.14393",
+		"StorageMedium": 1
+	},
+	"Version": 1,
+  "AllErrors": [
+    {
+      "ErrorCode": "HANDLER_EJECTOR_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_X_AXIS_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_Y_AXIS_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_Z_AXIS_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_EJECTOR_RECOVERED",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler ejector recovered"
+    },
+    {
+      "ErrorCode": "HANDLER_X_AXIS_RECOVERED",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler x axis recovered"
+    },
+    {
+      "ErrorCode": "HANDLER_Y_AXIS_RECOVERED",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler y axis recovered"
+    },
+    {
+      "ErrorCode": "HANDLER_Z_AXIS_RECOVERED",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler z axis recovered"
+    },
+    {
+      "ErrorCode": "HANDLER_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_NOT_CALIBRATED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "The Plate Handler is out of calibration. Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "HANDLER_EXTEND_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_RETRACT_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_LOAD_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_UNLOAD_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_NOT_INITIALIZED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler not initialized"
+    },
+    {
+      "ErrorCode": "HANDLER_IN_ERROR_STATE",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_PLATE_MISSING",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Handler plate missing"
+    },
+    {
+      "ErrorCode": "HANDLER_ASKED_TO_MOVE_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_HEAT_STAKER_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_HEAT_STAKER_MOTION_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_DROPLET_GENERATION_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_HEAD_MOTION_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_STAGE_MOTION_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_PRESSURE_TIMEOUT_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_VACUUM_TIMEOUT_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_NO_PLATE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_NO_CATCH_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_NO_RESPONCE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_NOT_VALID_CHIP_ERROR",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_TANK_FILL_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_EMPTY_WASTE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_EMPTY_WASTE_DENIED",
+      "ErrorType": "Warning",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_BUSY",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DG_HEATER_ERROR",
+      "ErrorType": "Warning",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "DG heater error"
+    },
+    {
+      "ErrorCode": "DG_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_DISCOVERY_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_STAGE_HOMING_AFTER_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_STAGE_NOT_CALIBRATED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_DATA_RECEIVER_NOT_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_DETECTOR_LED_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_NOT_ALL_BOARDS_REGISTERED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_CONFIG_INVALID",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_MASTER_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_WAIT_FOR_READ_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_DETECTOR_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_FLUIDICS_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_PID_NOT_SETTLED_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_WASTE_BOTTLE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please verify that the waste bottles have enough capacity available.\n Allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_DR_BOTTLE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please verify that the DR oil bottles have enough capacity available.\n Allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UART_MESSAGE_SENT_INTERRUPT_NOT_RECIEVED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UART_COMM_TIMEDOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UNKNOWN_UART_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC unknown uart error"
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_CALL",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_SEND",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_LT_CALL",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_RESP_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_RESP",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_SLAVE_STATUS",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_RTN_IDX",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_CMN_CHN",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_UNEXP_RESP",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BUSY_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_ATTENTION_TO",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_SLAVE_ABORT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_BAD_RCV",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_SLAVE_RCV",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LINK_ERROR_SLAVE_SEND",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UNKNOWN_LINK_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC unknown link error"
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_PAUSED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_HOLD",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_SELF_TEST",
+      "ErrorType": "Warning",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC runstate error self test"
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_INCUBATE",
+      "ErrorType": "Warning",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC runstate error incubate"
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_ABORT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_RUNSTATE_ERROR_INST_CHECK",
+      "ErrorType": "Warning",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC runstate error inst check"
+    },
+    {
+      "ErrorCode": "TC_DOWNLOAD_FAILED_MESSAGE_LENGTH",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_DOWNLOAD_FAILED_LINK_STATUS",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_DOWNLOAD_FAILED_FUNC_ID",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_DOWNLOAD_FAILED_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UNKNOWN_DOWNLOAD_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "LOCAL_CONTROLLER_TO_TC_DOWNLOAD_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_INSTRUMENT_TO_LOCAL_CONTROLLER_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_OPERATION_NOT_ALLOWED_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC unknown error"
+    },
+    {
+      "ErrorCode": "TC_LID_ERROR_NO_CHIP_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC lid error no chip detected"
+    },
+    {
+      "ErrorCode": "TC_LID_ERROR_CHIP_PLACEMENT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC lid error chip placement"
+    },
+    {
+      "ErrorCode": "TC_LID_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC lid unknown error"
+    },
+    {
+      "ErrorCode": "TC_LID_AXIS_ERROR_FALTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_AXIS_ERROR_ENCODER_COUNT_DOES_NOT_MATCH_CSPIN",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_AXIS_ERROR_CSPIN_COUNT_DOES_NOT_MATCH_REQUESTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_AXIS_ERROR_TIMED_OUT",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_AXIS_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC lid axis unknown error"
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_ABORTED_ADC_CHANGED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_KILL_SWITCH_STOPPED_MOTOR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_NOT_ENOUGH_ADC_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_CSPIN_COUNT_DOES_NOT_MATCH_REQUESTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_ENCODER_COUNT_DOES_NOT_MATCH_CSPIN_AT_BOTTOM",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_ERROR_ENCOUDER_COUNT_DOES_NOT_MATCH_CSPIN",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "TC_LID_ADC_BASED_MOTION_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_DG_MISSING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_DG_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_TC_MISSING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_TC_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_DR_MISSING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_DR_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_PH_MISSING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_PH_IN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_INSUFFICIENT_DG_EG_OIL",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Plate resource insufficient DG/EG oil"
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_INSUFFICIENT_DG_PROBE_OIL",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is not enough Droplet Generation Oil for Probes to run the loaded plates.\n Please add an extra bottle or one with more oil."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_INSUFFICIENT_DR_OIL",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is not enough Droplet Reader Oil to run the loaded plates.\n Please add an extra bottle or one with more oil."
+    },
+    {
+      "ErrorCode": "PLATE_RESOURCE_INSUFFICIENT_WASTE",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is not enough Waste Oil capacity to run the loaded plates.\n Please add an extra bottle or one with more capacity."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_P1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Droplet Generation Oil for Probes position 1 is not recognized as a Droplet Generation Oil for Probes bottle.\n Please try another bottle."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_P2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Droplet Generation Oil for Probes position 2 is not recognized as a Droplet Generation Oil for Probes bottle.\n Please try another bottle."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_E1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 1 slot is not recognized as an EvaGreen Oil bottle.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_E2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 2 slot is not recognized as an EvaGreen Oil bottle.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_D1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Droplet Reader Oil position 1 is not recognized as a Droplet Reader Oil Bottle.\n \u2022 Please try another bottle."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_D2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Droplet Reader Oil position 2 is not recognized as a Droplet Reader Oil Bottle.\n \u2022 Please try another bottle."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Waste position 1 is not recognized as a waste bottle.\n \u2022 Remove and insert a Waste bottle."
+    },
+    {
+      "ErrorCode": "BOTTLE_MISPLACED_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Bottles",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle in Waste position 2 is not recognized as a waste bottle.\n \u2022 Remove and insert a Waste bottle."
+    },
+    {
+      "ErrorCode": "RFID_STATION_WRONG_PLATE_ID",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Plate from an entry hotel slot has a different RFID than originally scanned."
+    },
+    {
+      "ErrorCode": "RFID_STATION_READ_FAILED",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "RFID station read failed"
+    },
+    {
+      "ErrorCode": "RFID_STATION_WRITE_FAILED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "RFID station write failed"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V24V_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V5V_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V3p3_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V12V_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V5p6_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V4p65_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_V24_CURRENT_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_LOCAL_TEMP_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_REMOTE_TEMP_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_FAN_CURRENT_RED_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_FAN_CURRENT_GREEN_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_LED_RED_CURRENT_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_LED_GREEN_CURRENT_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_LED_RED_DRIVE_TEMP_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_LED_GREEN_DRIVE_TEMP_OUT_OF_RANGE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_RED_FAN_LOCK_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_CYAN_FAN_LOCK_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_PID_UNSETTLED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive PID unsettled"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_PID_FAILED_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_GREEN_LED_DAC_WARNING_LEVEL_REACHED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive green LED DAC warning level reached"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_RED_LED_DAC_WARNING_LEVEL_REACHED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive red LED DAC warning level reached"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_GREEN_LED_DAC_MAX_VALUE_REACHED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive green LED DAC max value reached"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_RED_LED_DAC_MAX_VALUE_REACHED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive red LED DAC max value reached"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_FAN_FAILURE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_CONFIGURATION_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_DIGITAL_POT_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_UNKNOWN_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive unknown error"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_P1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 1 could not be read successfully. Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_P2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 2 could not be read successfully. Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_E1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bad tag type E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_E2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bad tag type E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_D1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Reader bottle 1 could not be read successfully. Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_D2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "\"The information on Droplet Reader bottle 2 could not be read successfully. Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_P1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_P2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_E1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_E2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_D1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_D2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, corrupt tag D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, bus error D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, timeout D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_P1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 1 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_P2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 2 could not be read successfully.\n \u2022 Please remove it and try another bottle"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_E1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 1 slot has a corrupted Read-Only RFID section.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_E2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 2 slot has a corrupted Read-Only RFID section.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_D1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Reader bottle 1 could not be read successfully.\n Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_D2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Reader bottle 2 could not be read successfully.\n Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_P1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 1 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_P2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Generation Oil for Probes bottle 2 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_E1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 1 slot has a corrupted Read-Write RFID section.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_E2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The bottle inserted into the DG Oil EvaGreen 2 slot has a corrupted Read-Write RFID section.\n \u2022 Remove and insert a bottle with DG EvaGreen Oil."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_D1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Reader bottle 1 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_D2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Droplet Reader bottle 2 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, unknown error D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, tag changed before write D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data failed D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, write data buffer corrupt D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_1_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 1 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_2_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 2 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_3_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 3 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_4_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 4 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_5_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 5 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_6_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, module 6 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting module power D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, resetting I2C peripheral D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, talking to bottle LED's D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, P1 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, P2 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, E1 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, E2 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, D1 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID error, D2 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_IS_HALTED_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_P1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_P2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_E1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_E2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_D1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_D2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is an unexpected plate in Inbox Slot 1.\n \u2022  Please remove it."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is an unexpected plate in Inbox Slot 2.\n \u2022  Please remove it."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT3",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is an unexpected plate in Inbox Slot 3.\n \u2022  Please remove it."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT4",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is an unexpected plate in Inbox Slot 4.\n \u2022  Please remove it."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT5",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "There is an unexpected plate in Inbox Slot 5.\n \u2022  Please remove it."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Inbox Slot 1. Please remove the plate."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Inbox Slot 2. Please remove the plate."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT3",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Inbox Slot 3. Please remove the plate."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT4",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Inbox Slot 4. Please remove the plate."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT5",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Inbox Slot 5. Please remove the plate."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BAD_TAG_TYPE_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 1 could not be read successfully.\n Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BAD_TAG_TYPE_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 2 could not be read successfully.\n Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_TAG_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, corrupt tag W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_TAG_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, corrupt tag W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BUS_ERROR_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, bus error W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BUS_ERROR_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, bus error W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TIMEOUT_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, timeout W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TIMEOUT_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, timeout W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 1 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 2 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 1 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "The information on Waste bottle 2 could not be read successfully.\n \u2022 Please remove it and try another bottle."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_UNKNOWN_ERROR_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, unknown error W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_UNKNOWN_ERROR_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, unknown error W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, tag changed before write W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, tag changed before write W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, write data failed W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, write data failed W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, write data buffer corrupt W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, write data buffer corrupt W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_1_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, module 1 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_2_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, module 2 bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, resetting module power W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, resetting module power W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, resetting I2C peripheral W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, resetting I2C peripheral W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, talking to bottle LED's W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, talking to bottle LED's W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_IS_HUNG_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, W1 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_IS_HUNG_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel RFID error, W2 is hung"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_IS_HALTED_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_IS_HALTED_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_W1",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG_W2",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to reserve exit hotel slot 1.\n \u2022 Remove the plate from exit hotel slot 1."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to reserve exit hotel slot 2.\n \u2022 Remove the plate from exit hotel slot 2."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT3",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to reserve exit hotel slot 3.\n \u2022 Remove the plate from exit hotel slot 3."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT4",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to reserve exit hotel slot 4.\n \u2022 Remove the plate from exit hotel slot 4."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT5",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to reserve exit hotel slot 5.\n \u2022 Remove the plate from exit hotel slot 5."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Outbox Slot 1. Please remove the plate.\nClick on Open Outbox button if the door is closed."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Outbox Slot 2. Please remove the plate.\nClick on Open Outbox button if the door is closed."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT3",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Outbox Slot 3. Please remove the plate.\nClick on Open Outbox button if the door is closed."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT4",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Outbox Slot 4. Please remove the plate.\nClick on Open Outbox button if the door is closed."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT5",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxSlot",
+      "DisplayToUser": true,
+      "DisplayMessage": "Unexpected plate in Outbox Slot 5. Please remove the plate.\nClick on Open Outbox button if the door is closed."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_BAD_TAG_TYPE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, bad tag type"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_TAG",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, corrupt tag"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_BUS_ERROR",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, bus error"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TIMEOUT",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, timeout"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_RO_SECTION",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, readonly section"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_RW_SECTION",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, read/write section"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_MODULE_IS_HUNG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_UNKNOWN_ERROR",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, unknown error"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, tag changed before write"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_WRITE_DATA_FAILED",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, write data failed"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, data buffer corrupt"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_MODULE_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, module bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_RESETTING_MODULE_POWER",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, resetting module power"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_RESETTING_I2C_PERIPHERAL",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, resseting I2C peripheral"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_MODULE_FAULT",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_MODULE_IS_HALTED",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_P1",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Supply Oil error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_P2",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Supply Oil error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_E1",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator lost communication E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_E2",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator lost communication E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_LOST_COMS",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator lost communication"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_P1",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Supply Oil error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_P2",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Supply Oil error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_E1",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator timeout E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_E2",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator timeout E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_ROTATOR_TIMEOUT",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller rotator timeout"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_P1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_P2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_E1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_E2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_D1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_D2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write timed out D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_P1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_P2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_E1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_E2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_D1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_OIL_BOTTLE_REMOVED_WHILE_IN_USE_D2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller oil bottle removed while in use D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_P1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, signal received P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_P2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, signal received P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_E1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error,signal received E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_E2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, signal received E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_D1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, signal received D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_D2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID error, signal received D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_P1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_P2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_E1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_E2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_D1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_WRITE_FAILED_D2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID write failed D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_P1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_P2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_E1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_E2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_D1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_RFID_READ_FAILED_D2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID read failed D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_BOTTLE_REMOVED_WHILE_IN_USE_W1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller waste bottle removed while in use W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_BOTTLE_REMOVED_WHILE_IN_USE_W2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller waste bottle removed while in use W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_DG_WASTE_OVER_TIME_RELEASED_W1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller DG waste over time released W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_DG_WASTE_OVER_TIME_RELEASED_W2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller DG waste over time released W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_DR_WASTE_OVER_TIME_RELEASED_W1",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller DR waste over time released W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_DR_WASTE_OVER_TIME_RELEASED_W2",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller DR waste over time released W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_OVERFLOW_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A waste overflow has occurred when pumping to waste bottle 1. Please manually empty waste overflow reservoir from the waste removal port on the front of the instrument and replace waste bottle 1.\n If the error re-occurs, please call service for assistance."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_OVERFLOW_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A waste overflow has occurred when pumping to waste bottle 2. Please manually empty waste overflow reservoir from the waste removal port on the front of the instrument and replace waste bottle 2.\n If the error re-occurs, please call service for assistance."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_IN_ERROR_STATE_W1",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller waste in error state W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_IN_ERROR_STATE_W2",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller waste in error state W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_OVERFLOW_SENSOR_DETECTED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A waste overflow has occurred.\n\nPlease ensure both waste bottles are empty and manually empty waste reservoir from the waste removal port per the user manual.\nIf the error re-occurs, please call service for assistance."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_MESSAGE_DROP_DETECTED",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller message drop detected"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_V24V_OUT_OF_RANGE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller V24V out of range"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_V5V_OUT_OF_RANGE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller V5V out of range"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_V3p3V_OUT_OF_RANGE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller V3p3V out of range"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_TEMP_OUT_OF_RANGE",
+      "ErrorType": "Warning",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller temperature out of range"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_FAN_FAILURE_DG",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "An internal cooling error has occurred which might impact quality of the data.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_FAN_FAILURE_TC",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "An internal cooling error has occurred which might impact quality of the data.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_FAN_FAILURE_DR",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "An internal cooling error has occurred which might impact quality of the data.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_I24V_OUT_OF_RANGE",
+      "ErrorType": "Warning",
+      "Module": "FrontDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door I24V out of range"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_MOTOR_1_FAULT",
+      "ErrorType": "Warning",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door motor 1 fault"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_MOTOR_2_FAULT",
+      "ErrorType": "Warning",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door motor 2 fault"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_ENTRY_NOT_HOMED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Entry door motor not homed"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_EXIT_NOT_HOMED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Exit door motor not homed"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_TIMEOUT",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "An inbox door move has failed.\n Please try again and call service if it persists."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_TIMEOUT",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "An outbox door move has failed.\n Please try again and call service if it persists."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_OUT_OF_BOUNDS",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "An inbox door move has failed.\n Please try again and call service if it persists."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_OUT_OF_BOUNDS",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "An outbox door move has failed.\n Please try again and call service if it persists."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_DID_NOT_REACH_TARGET_POSITION",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to open/close the door, push the doors slowly in a couple of inches.\nPress the open/close door button again.\nIf the problem persists call service."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_DID_NOT_REACH_TARGET_POSITION",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Failed to open/close the door, push the doors slowly in a couple of inches.\nPress the open/close door button again.\nIf the problem persists call service."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_BAD_TAG_TYPE",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred while scanning the plate. Please try a different plate.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_TAG",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred while scanning the plate. Please try a different plate.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_BUS_ERROR",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, bus error"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TIMEOUT",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, timeout"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_RO_SECTION",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred while scanning the plate. Please try a different plate.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_RW_SECTION",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred while scanning the plate. Please try a different plate.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, tag changed before write"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_WRITE_DATA_FAILED",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, write data failed"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, write data buffer corrupt"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_RESETTING_MODULE_POWER",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, resetting module power"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_POWER_FAULT",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, power fault"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_I2C_RFID_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, I2C RFID bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_I2C_FRONT_LED_BUS_DOWN",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, I2C front LED bus down"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_RESETTING_I2C_PERIPHERAL",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, resetting I2C peripheral"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_MODULE_IS_HALTED",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_MODULE_IS_HUNG",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": false,
+      "DisplayMessage": ""
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_UNKNOWN_ERROR",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door RFID error, unknown error"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_INTERLOCK_ACTIVE",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "The instrument front panel has been opened. All runs have been aborted. Please close the front panel and power cycle the instrument."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_P1",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version P1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_P2",
+      "ErrorType": "Warning",
+      "Module": "RfidProbesOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version P2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_E1",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version E1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_E2",
+      "ErrorType": "Warning",
+      "Module": "RfidEvagreenOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version E2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_D1",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version D1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_D2",
+      "ErrorType": "Warning",
+      "Module": "RfidDrOil2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version D2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_INVALID_FW_VERSION_W1",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste1",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version W1"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_RFID_INVALID_FW_VERSION_W2",
+      "ErrorType": "Warning",
+      "Module": "RfidWaste2",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version W2"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_RFID_INVALID_FW_VERSION",
+      "ErrorType": "Warning",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel RFID invalid firmware version"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_RFID_INVALID_FW_VERSION",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller RFID invalid firmware version"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_MASTER_PLACEHOLDER",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node master placeholder"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_INSTRUMENT_MASTER",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node instrument master"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_AXIS_X",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node axis X"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_AXIS_Y",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node axis Y"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_AXIS_Z",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node axis Z"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_PISTON_PUMP_1",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node piston pump 1"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_PISTON_PUMP_2",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node piston pump 2"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_DETECTOR_LED_DRIVE",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node detector LED drive"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_DR_FLUIDICS_CONTROLLER",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node DR fluidics controller"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_BOTTLE_SWITCHING_VALVE_CONTROLLER",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node bottle switching valve controller"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_ENTRY_HOTEL",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node entry hotel"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_EXIT_HOTEL",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node exit hotel"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_POWER_CAN_DIST",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node CAN bus power distributor"
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_BUS_SENTINEL",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Missing node bus sentinel"
+    },
+    {
+      "ErrorCode": "ERROR_DR_INSTRUMENT_MASTER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR instrument master did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_X_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR axis X did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Y_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR axis Y did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Z_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR axis Z did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_1_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR piston pump 1 did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_2_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR piston pump 2 did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector LED drive did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DG_FLUIDICS_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "DG fluidics controller did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR detector did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_FLUIDICS_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR fluidics controller did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DG_LOCAL_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "DG local controller did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_TC_LOCAL_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC local controller did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_X_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis handler X axis did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Y_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis handler Y axis did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Z_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis handler Z axis did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_UNABLE_TO_CHECK_TC_FOR_PLATE",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_DG",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred while trying to remove a plate from the Droplet Generator. Please turn off the instrument power, open the front panel and remove the plate manually.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_TC",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred while trying to remove a plate from the Thermal Cycler. Please turn off the instrument power, open the front panel and remove the plate manually.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_DR",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred while trying to remove a plate from the Droplet Reader. Please turn off the instrument power, open the front panel and remove the plate manually.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_TC_EJECTOR_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "TC ejector did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "Inbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis entry hotel did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_MASTER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "DR master did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis CAN bus power distributor did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "Outbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis exit hotel did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis bottle and fan controller did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_BOARD_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "FrontDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Chassis front door board did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "BUS_SENTINAL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Bus sentinel did not respond to heartbeat request"
+    },
+    {
+      "ErrorCode": "ERROR_DR_INSTRUMENT_MASTER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_X_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Y_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Z_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_1_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_2_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DG_FLUIDICS_CONTROLLER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_FLUIDICS_CONTROLLER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DG_LOCAL_CONTROLLER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_TC_LOCAL_CONTROLLER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_X_AXIS_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Y_AXIS_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Z_AXIS_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_TC_EJECTOR_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Inbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_MASTER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Outbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_BOARD_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "FrontDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "BUS_SENTINAL_ASSERT_DETECTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_INSTRUMENT_MASTER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_X_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Y_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_AXIS_Z_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_1_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_PISTON_PUMP_2_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_LED_DRIVE_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_FLUIDICS_CONTROLLER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_DETECTOR_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_FLUIDICS_CONTROLLER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_LOCAL_CONTROLLER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_TC_LOCAL_CONTROLLER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_X_AXIS_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Y_AXIS_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_Z_AXIS_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_TC_EJECTOR_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_ENTRY_HOTEL_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "Inbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_DR_MASTER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_EXIT_HOTEL_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "Outbox",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_FRONT_DOOR_BOARD_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "FrontDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Control System error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n Please call Bio-Rad support to resolve the issue."
+    },
+    {
+      "ErrorCode": "BUS_SENTINAL_BOOTLOADER_RUNNING",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_LOCATION_CONFIG_NOT_VALID",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_INVALID_AXIS",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_INVALID_LOCATION",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_SAVE_LOCATION_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_PLATE_DETECTED_BEFORE_GET_PLATE",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_BUSY",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "HANDLER_PLATE_DETECTED_AFTER_DROP_OFF",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_MW_ASSERTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_OVERFLOW_TOP_SENSOR_DETECTED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Immediate attention required! Significant waste detected in the overflow reservoir. \nTo continue processing plates, please perform the \"Aspirate Vent Overflow\" procedure.\nFailure to do so will cause the system to enter into an error state.\nIf the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_INSTRUMENT_MASTER_CONNECTION_LOST",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "DR_NO_PLATE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_VERSIONS_DO_NOT_MATCH",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_BULK_TRANSFER_PATH_LENGTH",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_BULK_TRANSFER_FILE_SIZE",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_BULK_TRANSFER_FILE_NOT_FOUND",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_BULK_TRANSFER_WELL_DATA_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DR_BULK_TRANSFER_PLATE_DATA_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_BFC_WASTE_OVERFLOW_LOWER_SENSOR_DETECTED",
+      "ErrorType": "AssistanceNeeded",
+      "Module": "BottleAndFanController",
+      "DisplayToUser": true,
+      "DisplayMessage": "Waste detected in the overflow reservoir. \nPlease perform the \"Aspirate Vent Overflow\" procedure before adding new plates. \nThis procedure can be performed while the instrument is processing  plates. \nIf the issue persists, please call Bio-Rad support"
+    },
+    {
+      "ErrorCode": "UnknownSubmoduleError",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "InvalidInstrumentSerialNumbers",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Invalid instrument serial numbers.\n Power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_DG_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_TC_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_DR_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_PlateHandler_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_InboxDoor_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "InboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Power cycle the instrument, push the doors slowly in a couple of inches and power on the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_OutboxDoor_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "OutboxDoor",
+      "DisplayToUser": true,
+      "DisplayMessage": "Power cycle the instrument, push the doors slowly in a couple of inches and power on the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Instrument_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Instrument_Offline",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Instrument connection has been lost.\nPlease power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SoftwareError",
+      "ErrorType": "Warning",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Software Error, exception caught. Some data might be usable.\nView the Event log for recent software exceptions and report to Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_InvalidFwVersion",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "The controller firmware version is not compatible with this QX One software version. Please check compatibility matrix and update the QX One software and firmware accordingly."
+    },
+    {
+      "ErrorCode": "SW_TimeoutWaitingForResponseFromFW",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_PLATE_RECOVERY_DATABASE_CORRUPTED",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "Error plate recovery database corrupted"
+    },
+    {
+      "ErrorCode": "ERROR_DR_WELL_ACQUISITION_TIMED_OUT",
+      "ErrorType": "ServiceCall",
+      "Module": "DR",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Reader error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_POWER_NOT_GOOD",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_AC_VOLTAGE_FAIL",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_OVER_TEMP",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_24V",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_ES",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_TC",
+      "ErrorType": "ServiceCall",
+      "Module": "Instrument",
+      "DisplayToUser": true,
+      "DisplayMessage": "An instrument error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_HANDLER_X_AXIS",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_HANDLER_Y_AXIS",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_HANDLER_Z_AXIS",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_MISSING_NODE_TC_EJECTOR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_LOCAL_CONTROLLER_HEATER_KILL_SWITCH_ACTIVE",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_LOCAL_CONTROLLER_HEATER_TIMEOUT",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_1_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_2_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_DG_DG_Master_DG_IN_ERROR_STATE",
+      "ErrorType": "ServiceCall",
+      "Module": "DG",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Droplet Generator error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_CHASIS_HANDLER_MOTION_FAILED",
+      "ErrorType": "ServiceCall",
+      "Module": "PlateHandler",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Plate Handler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "ERROR_TC_TC_LOCAL_CONTROLLER_TC_ERROR",
+      "ErrorType": "ServiceCall",
+      "Module": "TC",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Thermal Cycler error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_FrontDoorRfid_UnknownError",
+      "ErrorType": "ServiceCall",
+      "Module": "FrontDoorRfid",
+      "DisplayToUser": true,
+      "DisplayMessage": "A Front Door RFID error has occurred.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Slot_UnknownError_Slot1",
+      "ErrorType": "ServiceCall",
+      "Module": "Slot",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred with Slot 1.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Slot_UnknownError_Slot2",
+      "ErrorType": "ServiceCall",
+      "Module": "Slot",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred with Slot 2.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Slot_UnknownError_Slot3",
+      "ErrorType": "ServiceCall",
+      "Module": "Slot",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred with Slot 3.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Slot_UnknownError_Slot4",
+      "ErrorType": "ServiceCall",
+      "Module": "Slot",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred with Slot 4.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    },
+    {
+      "ErrorCode": "SW_Slot_UnknownError_Slot5",
+      "ErrorType": "ServiceCall",
+      "Module": "Slot",
+      "DisplayToUser": true,
+      "DisplayMessage": "An error has occurred with Slot 5.\n Please allow the current runs to complete, if possible.\n Then power cycle the instrument and try again.\n If the issue persists, please call Bio-Rad support."
+    }
+  ]
+}
