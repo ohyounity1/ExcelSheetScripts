@@ -98,7 +98,7 @@ if(len(arguments.Source) > 1):
 if(arguments.destination == 'Null'):
     exit()
     
-if(arguments.destination == 'Prompt'):
+if(arguments.destination == 'Prompt' and actionType != ActionTypes.ActionType.DIFF):
     print('Main Source Display {}'.format(mainSourceFile))
     ErrorCodeTableDisplay(mainSourceResults, mainSourceType, output)
     

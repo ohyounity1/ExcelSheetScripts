@@ -38,6 +38,9 @@ def ConvertDisplayMsg(name, data):
         return displayMsg
     elif(name == Constants.ErrorDisplaysMsgProperty or name == Constants.ErrorIdProperty):
         return str(data)
+    elif(name == Constants.ErrorTypeProperty):
+        strValue = str(data)
+        return strValue.replace('ErrorType.', '')
     return data
 
 def Action(columnName, errorCode, dataConverter, largestColumns, dataRow, currentColumnCounter):

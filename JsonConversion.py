@@ -3,6 +3,7 @@ import json
 from lib.Constants import Constants
 from lib.ErrorCodes import ErrorCode
 from lib.Output import Out
+from lib.Constants import ErrorTypes
 
 def JsonFileErrorCodeListing(fileName, output):
     with open(fileName) as jsonFileContents:
