@@ -80,7 +80,7 @@ if(mainSourceResults is None):
     output.Error('There were no error codes found in {}!'.format(mainSourceFile))
     
 actionType = None
-
+secondarySourceResults = None
 # We have a secondary source file
 if(len(arguments.Source) > 1):
 

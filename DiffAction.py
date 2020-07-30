@@ -47,7 +47,7 @@ def ActionDiffOnErrorLists(firstErrorList, firstSourceFile, secondErrorList, sec
                     differenceListing.append(Difference(Constants.ErrorTypeProperty, first.ErrorName, first.ErrorType, second.ErrorType))
 
     if(len(differenceListing) > 0):
-        print('FirstValue = {}\nSecondValue = {}'.format(firstSourceFile, secondSourceFile))
+        print('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(firstSourceFile, secondSourceFile, len(differenceListing)))
         TableDisplay.ErrorListToTableDisplay(differenceListing, ['ErrorCodeName', 'FirstValue', 'SecondValue'])
         
     differenceListing = []
@@ -65,7 +65,7 @@ def ActionDiffOnErrorLists(firstErrorList, firstSourceFile, secondErrorList, sec
                     differenceListing.append(Difference(Constants.ErrorDisplayMsgProperty, first.ErrorName, firstDisplayMsg, secondDisplayMsg))
 
     if(len(differenceListing) > 0):
-        print('FirstValue = {}\nSecondValue = {}'.format(firstSourceFile, secondSourceFile))
+        print('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(firstSourceFile, secondSourceFile, len(differenceListing)))
         for x in differenceListing:
             first = x.FirstValue
             second = x.SecondValue
