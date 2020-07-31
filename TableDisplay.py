@@ -55,9 +55,16 @@ def ErrorListToTableDisplay(objects, headers, msgConverter=None):
         
         currentColumnCounter = [currentColumn]
         
+        headerCount = 0
         for header in headers:
             DetermineTableStatistics(header, o, __Inner__, largestColumns, dataRow, currentColumnCounter)
+            headerCount += 1
 
+        debugOutput = 'Row Data: '
+        for i in range(0, headerCount):
+            debugOutput += f'{headers[i]} : {dataRow[i]}'
+
+        Out.VerbosePrint(Out.Verbosity.HIGH, f'Tabling the object: {debugOutput}')
         tabularFormat.append(dataRow)
 
     PrintBorder(largestColumns)

@@ -33,15 +33,23 @@ if(len(arguments.Source) > 1):
 if(arguments.destination == 'Null'):
     exit()
     
-if(arguments.destination == 'Prompt' and 'Display' in arguments.Action):
-    # Print all results to output
-    Out.RegularPrint('Main Source Display {}'.format(mainSourceFile))
-    
-    Helper.ErrorCodeTableDisplay(mainSourceFile, mainSourceResults, arguments.Select)
+if('Display' in arguments.Action):
+    Helper.ErrorCodeTableDisplay(mainSourceFile, mainSourceResults, arguments.destination, arguments.Select)
     
     if(secondarySourceResults is not None):
-        Out.RegularPrint('Secondary Source Display {}'.format(secondarySourceFile))
-        Helper.ErrorCodeTableDisplay(secondarySourceFile, secondarySourceResults, arguments.Select)
+        Helper.ErrorCodeTableDisplay(secondarySourceFile, secondarySourceResults, arguments.destination, arguments.Select)
+elif(arguments.destination == 'CSV' and 'Display' in arguments.Action):
+    with open('ErrorCodesListing.csv', 'w') as csvFile:
+
+        # Print all results to output
+        csvFile.write('Main Source Display {}'.format(mainSourceFile))
+    
+        csvFile.write(f'\n')
+    
+        if(secondarySourceResults is not None):
+            Out.RegularPrint('Secondary Source Display {}'.format(secondarySourceFile))
+            Helper.ErrorCodeTableDisplay(secondarySourceFile, secondarySourceResults, arguments.Select)
+
 
 if(len(arguments.Action) > 0 and secondarySourceResults != None):
     import DiffAction

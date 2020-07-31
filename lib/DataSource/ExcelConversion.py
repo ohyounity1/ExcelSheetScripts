@@ -45,6 +45,10 @@ def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
 def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]:
     import xlrd 
 
+    def ErrorId(errorIdStr):
+        if(isinstance(errorIdStr, float)):
+            return int(errorIdStr)
+        return errorIdStr
     # To open Workbook 
     with xlrd.open_workbook(fileName) as book:
         sheet = book.sheet_by_index(Constants.ErrorSheet) 
@@ -67,7 +71,7 @@ def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]
             errorCodeDisplaysMsg = (lambda x: x == 'Y')(sheet.cell_value(i, colPositions[3]))
             errorCodeDisplayMsg = sheet.cell_value(i, colPositions[4])
             
-            Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in Excel Sheet Line: {}, {}, {}'.format(errorCodeName, errorCodeId, errorCodeType))
+            Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in Excel Sheet Line: {}, {}, {}'.format(errorCodeName, ErrorId(errorCodeId), str(errorCodeType)))
             if(errorCodeName != '' and errorCodeName[0] != '/'):
                 if(errorCodeName[len(errorCodeName)-1] == ',') :
                     Out.VerbosePrint(Out.Verbosity.MEDIUM, 'Cleaning up error code {}'.format(errorCodeName))

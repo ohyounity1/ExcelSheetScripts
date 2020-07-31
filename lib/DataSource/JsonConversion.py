@@ -26,7 +26,7 @@ def JsonFileErrorCodeListing(fileName, allErrorCodes):
             errorCodeDisplaysMsg = errorCodeJson['DisplayToUser']
             errorCodeDisplayMsg = errorCodeJson['DisplayMessage']
 
-            Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in JSON Sheet Line: {}, {}, {}'.format(errorCodeName, errorCodeModule, errorCodeType))
+            Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in JSON Sheet Line: {}, {}, {}'.format(errorCodeName, errorCodeModule, str(errorCodeType)))
 
             errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, errorCodeModule, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
             allErrorCodes.append(errorCode)
