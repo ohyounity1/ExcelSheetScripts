@@ -55,3 +55,11 @@ def VerbosePrinter(printer):
 
 # Default to basic output
 VerbosePrint = VerbosePrinter(print)
+
+def RegularPrinter(printer):
+	def __RegularPrinter__(output):
+		printer(output)
+	return __RegularPrinter__
+
+#Default main output to print
+RegularPrint = RegularPrinter(print)

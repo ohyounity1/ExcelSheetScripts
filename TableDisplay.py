@@ -26,24 +26,9 @@ def PrintRow(row, largestColumns):
     finalFormat = formatString.format(*largestColumns)
     
     print(finalFormat % tuple(formatList))
-    
-def ConvertDisplayMsg(name, data):
-    if(name == 'ErrorDisplayMsg'):        
-        displayMsg = ''
-        if(len(data) > 30):
-            displayMsg = '{}...'.format(data[0:30])
-        elif(len(data) > 0):
-            displayMsg = data
-        
-        return displayMsg
-    elif(name == Constants.ErrorDisplaysMsgProperty or name == Constants.ErrorIdProperty):
-        return str(data)
-    elif(name == Constants.ErrorTypeProperty):
-        strValue = str(data)
-        return strValue.replace('ErrorType.', '')
-    return data
 
-def Action(columnName, errorCode, dataConverter, largestColumns, dataRow, currentColumnCounter):
+
+def DetermineTableStatistics(columnName, errorCode, dataConverter, largestColumns, dataRow, currentColumnCounter):
     currentColumn = currentColumnCounter[0]
     columnData = getattr(errorCode, columnName)
     columnData = dataConverter(columnName, columnData)
@@ -53,24 +38,23 @@ def Action(columnName, errorCode, dataConverter, largestColumns, dataRow, curren
     dataRow.append(columnData)
     currentColumnCounter[0] = currentColumn + 1
         
-def ErrorListToTableDisplay(errorList, selections):
-    tabularFormat = [ ]
-    largestColumns = []
-    headers = []
+def ErrorListToTableDisplay(objects, headers, msgConverter=None):
+    def __Inner__(colName, msg):
+        if(msgConverter == None): 
+            return msg
+        return msgConverter(colName, msg)
+
+    tabularFormat = []
+    largestColumns = [0 for _ in headers]
     
-    # Only include the headers needed
-    for header in selections:
-        headers.append(header)
-        largestColumns.append(0)
-    
-    for ec in errorList:
+    for o in objects:
         currentColumn = 0
         dataRow = []
         
         currentColumnCounter = [currentColumn]
         
         for header in headers:
-            Action(header, ec, ConvertDisplayMsg, largestColumns, dataRow, currentColumnCounter)
+            DetermineTableStatistics(header, o, __Inner__, largestColumns, dataRow, currentColumnCounter)
 
         tabularFormat.append(dataRow)
 

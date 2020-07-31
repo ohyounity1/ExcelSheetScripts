@@ -14,7 +14,16 @@ def JsonFileErrorCodeListing(fileName, allErrorCodes):
             errorCodeName = errorCodeJson['ErrorCode']
             errorCodeId = -1
             errorCodeModule = errorCodeJson['Module']
-            errorCodeType = errorCodeJson['ErrorType']
+            errorCodeTypeStr = errorCodeJson['ErrorType']
+
+            errorCodeType = ''
+            if('ServiceCall' == errorCodeTypeStr):
+                errorCodeType = ErrorCode.ErrorType.ServiceCall()
+            elif('AssistanceNeeded' == errorCodeTypeStr):
+                errorCodeType = ErrorCode.ErrorType.AssistanceNeeded()
+            elif('Warning' == errorCodeTypeStr):
+                errorCodeType = ErrorCode.ErrorType.Warning()
+
             errorCodeDisplaysMsg = errorCodeJson['DisplayToUser']
             errorCodeDisplayMsg = errorCodeJson['DisplayMessage']
             errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, errorCodeModule, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)

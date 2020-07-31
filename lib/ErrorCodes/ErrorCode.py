@@ -27,3 +27,11 @@ class ErrorType(IntEnum):
         self.Type = type
     def __repr__(self):
         return self.__Mapping__[self.Type]
+    def __str__(self):
+        return self.__repr__()
+    def ServiceCall():
+        return ErrorType(ErrorType.SERVICE_CALL)
+    def AssistanceNeeded():
+        return ErrorType(ErrorType.ASSISTANCE_NEEDED)
+    def Warning():
+        return ErrorType(ErrorType.WARNING)

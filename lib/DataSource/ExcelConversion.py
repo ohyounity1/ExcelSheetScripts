@@ -61,11 +61,11 @@ def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]
             
             errorCodeType = ''
             if('Service Call' in errorCodeTypeStr):
-                errorCodeType = ErrorCode.ErrorType.SERVICE_CALL
+                errorCodeType = ErrorCode.ErrorType.ServiceCall()
             elif('Assistance Needed' in errorCodeTypeStr):
-                errorCodeType = ErrorCode.ErrorType.ASSISTANCE_NEEDED
+                errorCodeType = ErrorCode.ErrorType.AssistanceNeeded()
             elif('Warning' in errorCodeTypeStr):
-                errorCodeType = ErrorCode.ErrorType.WARNING
+                errorCodeType = ErrorCode.ErrorType.Warning()
                 
             errorCodeDisplaysMsg = (lambda x: x == 'Y')(sheet.cell_value(i, colPositions[3]))
             errorCodeDisplayMsg = sheet.cell_value(i, colPositions[4])

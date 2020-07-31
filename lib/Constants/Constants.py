@@ -12,6 +12,7 @@ ColErrorDisplaysMsgIndex = 3
 ColErrorDisplayMsgIndex = 4
 
 MaxSourceArguments = 2
+MaxDisplayStringForTable = 20
 
 SupportedExcelExtensions = ['.xls' , '.xlsx']
 SupportedJsonExtensions = [ '.json' ]
