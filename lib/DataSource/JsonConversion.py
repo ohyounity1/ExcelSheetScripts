@@ -5,14 +5,10 @@ from lib.ErrorCodes import ErrorCode
 from lib.Output import Out
 from lib.Constants import ErrorTypes
 
-def JsonFileErrorCodeListing(fileName, output):
+def JsonFileErrorCodeListing(fileName, allErrorCodes):
     with open(fileName) as jsonFileContents:
         errorCodesJson = json.load(jsonFileContents)
         errorCodesJsonListing = errorCodesJson['AllErrors']
-        
-        allErrorCodes = []
-    
-        totalErrorCodes = 0
         
         for errorCodeJson in errorCodesJsonListing:
             errorCodeName = errorCodeJson['ErrorCode']
@@ -23,8 +19,3 @@ def JsonFileErrorCodeListing(fileName, output):
             errorCodeDisplayMsg = errorCodeJson['DisplayMessage']
             errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, errorCodeModule, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
             allErrorCodes.append(errorCode)
-            totalErrorCodes = totalErrorCodes + 1
-            
-        output.Verbose(Out.VerbosityLow, 'Total Error Code Count: {} from {}'.format(len(allErrorCodes), fileName))
-        
-        return allErrorCodes
