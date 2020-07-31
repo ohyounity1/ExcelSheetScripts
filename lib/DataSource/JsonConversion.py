@@ -3,7 +3,6 @@ import json
 from lib.Constants import Constants
 from lib.ErrorCodes import ErrorCode
 from lib.Output import Out
-from lib.Constants import ErrorTypes
 
 def JsonFileErrorCodeListing(fileName, allErrorCodes):
     with open(fileName) as jsonFileContents:
@@ -26,5 +25,8 @@ def JsonFileErrorCodeListing(fileName, allErrorCodes):
 
             errorCodeDisplaysMsg = errorCodeJson['DisplayToUser']
             errorCodeDisplayMsg = errorCodeJson['DisplayMessage']
+
+            Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in JSON Sheet Line: {}, {}, {}'.format(errorCodeName, errorCodeModule, errorCodeType))
+
             errorCode = ErrorCode.ErrorCode(errorCodeName, errorCodeId, errorCodeModule, errorCodeType, errorCodeDisplaysMsg, errorCodeDisplayMsg)
             allErrorCodes.append(errorCode)

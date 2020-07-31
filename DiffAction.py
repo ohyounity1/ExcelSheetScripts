@@ -1,7 +1,9 @@
 from lib.Constants import Constants
+from lib.Output import Out
+from lib.Utility import Utility
 
 import TableDisplay
-import difflib
+
 
 class Difference:
     def __init__(self, propertyName, errorCodeName, firstValue, secondValue):
@@ -10,88 +12,75 @@ class Difference:
         self.FirstValue = firstValue
         self.SecondValue = secondValue
 
+class ErrorCodeDifference:
+    def __init__(self, errorCodeLeft, errorCodeRight):
+        self.ErrorCodeLeft = errorCodeLeft
+        self.ErrorCodeRight = errorCodeRight
+
 def CompareLists(firstList, secondList):
-    errorsInFirstNotInSecond = []
+    comparison = list()
+
     for first in firstList:
-        foundInSecondList = False
-        firstErrorName = first.ErrorName
+        found = False
         for second in secondList:
-            if(second.ErrorName == firstErrorName):
-                foundInSecondList = True
+            if(first.ErrorName == second.ErrorName):
+                found = True
                 break
-        if(foundInSecondList == False):
-            errorsInFirstNotInSecond.append(firstErrorName)
-            
-    return errorsInFirstNotInSecond
+        if(found == False):
+            comparison.append(first.ErrorName)
 
-def DisplayComparisons(differences, firstSource, secondSource):
-    if(len(differences) > 0):
-        print('Errors found in {}, but not in {}'.format(firstSource, secondSource))
-        for x in differences:
-            print(x)
-            
-            
-def ActionDiffOnErrorLists(firstErrorList, firstSourceFile, secondErrorList, secondSourceFile):
-    errorsInFirstNotInSecond = CompareLists(firstErrorList, secondErrorList)           
-    errorsInSecondNotInFirst = CompareLists(secondErrorList, firstErrorList)
-            
-    DisplayComparisons(errorsInFirstNotInSecond, firstSourceFile, secondSourceFile)
-    DisplayComparisons(errorsInSecondNotInFirst, secondSourceFile, firstSourceFile)
-    
-    differenceListing = []
-    
-    for first in firstErrorList:
-        for second in secondErrorList:
-            if(second.ErrorName == first.ErrorName):
-                if(second.ErrorType != first.ErrorType):
-                    differenceListing.append(Difference(Constants.ErrorTypeProperty, first.ErrorName, first.ErrorType, second.ErrorType))
+    return comparison
 
-    if(len(differenceListing) > 0):
-        print('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(firstSourceFile, secondSourceFile, len(differenceListing)))
-        TableDisplay.ErrorListToTableDisplay(differenceListing, ['ErrorCodeName', 'FirstValue', 'SecondValue'])
-        
-    differenceListing = []
-    
-    for first in firstErrorList:
-        for second in secondErrorList:
-            if(second.ErrorName == first.ErrorName):
-                firstDisplayMsg = first.ErrorDisplayMsg.translate(str.maketrans('','',' \t\r\n'))
-                firstDisplayMsg = firstDisplayMsg.replace(chr(183),"")
-                firstDisplayMsg = firstDisplayMsg.replace(chr(8226),"")
-                secondDisplayMsg = second.ErrorDisplayMsg.translate(str.maketrans('','',' \t\r\n'))
-                secondDisplayMsg = secondDisplayMsg.replace(chr(183),"")
-                secondDisplayMsg = secondDisplayMsg.replace(chr(8226),"")
-                if(firstDisplayMsg != secondDisplayMsg):
-                    differenceListing.append(Difference(Constants.ErrorDisplayMsgProperty, first.ErrorName, firstDisplayMsg, secondDisplayMsg))
+def ActionDiffErrorCodes(errorLists, errorSources):
+    tiedResults = (CompareLists(*errorLists[0]), CompareLists(*errorLists[1]))
+    # Untie method is packed in last argument of packed argument
+    untieSources = errorSources[-1]
+    firstSource, secondSource = untieSources()
 
-    if(len(differenceListing) > 0):
-        print('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(firstSourceFile, secondSourceFile, len(differenceListing)))
-        for x in differenceListing:
-            first = x.FirstValue
-            second = x.SecondValue
-            reasonString = ''
-            if(len(first) == 0):
-                reasonString = 'First display msg is empty!'
-            elif(len(second) == 0):
-                reasonString = 'Second display msg is empty!'
-            else:
-                for i,s in enumerate(difflib.ndiff(first, second)):
-                    if s[0]==' ': continue
-                    elif s[0]=='-':
-                        reasonString += (u' Delete "{}" from position {} '.format(s[-1],i))
-                        if(i < len(first)):
-                            first = first[:i] + '[' + first[i] + ']' + first[i+1:]
-                        
-                        if(i < len(second)):
-                            second = second[:i] + '[' + second[i] + ']' + second[i+1:]
-                        break
-                    elif s[0]=='+':
-                        reasonString += (u' Add "{}" to position {} '.format(s[-1],i))    
-                        if(i < len(first)):
-                            first = first[:i] + '[' + first[i] + ']' + first[i+1:]
-                        
-                        if(i < len(second)):
-                            second = second[:i] + '[' + second[i] + ']' + second[i+1:]
-                        break
-            print('\n{}\n--Summary:{}\n----{}\n------{}\n----{}\n------{}\n'.format(x.ErrorCodeName, reasonString, firstSourceFile, first, secondSourceFile, second))
-             
+    differenceListing = list()
+    outerIndex = 0
+    while(outerIndex < len(tiedResults[0])):
+        if(outerIndex < len(tiedResults[1])):
+            differenceListing.append(ErrorCodeDifference(tiedResults[0][outerIndex], tiedResults[1][outerIndex]))
+        else:
+            differenceListing.append(ErrorCodeDifference(tiedResults[0][outerIndex], ''))
+        outerIndex += 1
+
+    while(outerIndex < len(tiedResults[1])):
+        differenceListing.append(ErrorCodeDifference('', tiedResults[1][outerIndex]))
+        outerIndex += 1
+
+    return differenceListing
+    
+
+def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
+    if('Diff-Types' == whatToDiff or 'Diff-All' == whatToDiff):
+        differenceListing = list()
+        differenceCount = 0
+        for first in firstSet:
+            for second in secondSet:
+                if(second.ErrorName == first.ErrorName):
+                    if(showAll or second.ErrorType != first.ErrorType):
+                        differenceListing.append(Difference(Constants.ErrorTypeProperty, first.ErrorName, first.ErrorType, second.ErrorType))
+                        if(second.ErrorType != first.ErrorType):
+                            differenceCount += 1
+
+        return differenceListing
+
+    if('Diff-Msgs' in whatToDiff or 'Diff-All' in whatToDiff):
+        differenceListing = []
+
+        for first in firstSet:
+            for second in secondSet:
+                if(second.ErrorName == first.ErrorName):
+                    firstDisplayMsg = first.ErrorDisplayMsg.translate(str.maketrans('','',' \t\r\n'))
+                    firstDisplayMsg = firstDisplayMsg.replace(chr(183),"")
+                    firstDisplayMsg = firstDisplayMsg.replace(chr(8226),"")
+                    secondDisplayMsg = second.ErrorDisplayMsg.translate(str.maketrans('','',' \t\r\n'))
+                    secondDisplayMsg = secondDisplayMsg.replace(chr(183),"")
+                    secondDisplayMsg = secondDisplayMsg.replace(chr(8226),"")
+                    if(firstDisplayMsg != secondDisplayMsg):
+                        differenceListing.append(Difference(Constants.ErrorDisplayMsgProperty, first.ErrorName, firstDisplayMsg, secondDisplayMsg))
+        return differenceListing
+
+    

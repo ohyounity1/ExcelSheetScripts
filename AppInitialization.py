@@ -17,10 +17,11 @@ def ParseCommandLine():
     parser.add_argument('-v', '--verbose', dest='Verbosity', help='Verbosity level.  Repeat for higher level... e.g. -vv will print with Medium Verbosity', action='count', default=0)
     # The columns to be displayed for the headers
     parser.add_argument('--select', dest='Select', help='Which columns to display in the tables', nargs='*', default=[])
+    parser.add_argument('--diff-show-all', dest='DiffShowAll', help='Display all the items in the table for the diff, even those not different', action='store_true')
     # Redirect output to a log file
     parser.add_argument('--vlog', dest='VLog', help='Indication to log verbose output to the specified file', default=None)
     parser.add_argument('--log', dest='Log', help='Indication to log all main output to the specified file', default=None)
-    parser.add_argument('-a', '--action', dest='Action', help='The action to run, can be several together: DISPLAY, DIFF, EXPORT', nargs='*', default=['DISPLAY'])
+    parser.add_argument('-a', '--action', dest='Action', help='The action to run, can be several together: DISPLAY, DIFF, EXPORT', nargs='*', default=['Display'])
     # The destination type for the output, can be prompt, CSV, JSON, Excel
     parser.add_argument('-d', '--destination', help='Destination file name.  If .xls or .xlsx treated as Excel, .json treated as JSON, prompt prints to prompt, Null for no output, CSV for CSV output', default='Prompt')
 
@@ -39,11 +40,11 @@ def ParseCommandLine():
 
     # Redirect output to a log
     if(arguments.VLog is not None):
-        vlog = open(arguments.VLog, "a")
+        vlog = open(arguments.VLog, "w")
         Out.VerbosePrint = Out.VerbosePrinter(lambda o : vlog.write(o + '\n'))
 
     if(arguments.Log is not None):
-        log = open(arguments.Log, "a")
+        log = open(arguments.Log, "w")
         Out.RegularPrint = Out.RegularPrinter(lambda o : log.write(o + '\n'))
 
     for a in arguments.Action:

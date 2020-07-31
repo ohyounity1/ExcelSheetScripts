@@ -1,6 +1,8 @@
 from lib.Utility import Utility
 from lib.Constants import Constants
 
+from lib.Output import Out
+
 def PrintBorder(largestColumns):
     formatArgs = []
     formatString = ''
@@ -10,7 +12,7 @@ def PrintBorder(largestColumns):
         
     formatString += '|'
     
-    print(formatString.format(*formatArgs))
+    Out.RegularPrint(formatString.format(*formatArgs))
         
 def PrintRow(row, largestColumns):
     formatString = ''
@@ -25,7 +27,7 @@ def PrintRow(row, largestColumns):
     
     finalFormat = formatString.format(*largestColumns)
     
-    print(finalFormat % tuple(formatList))
+    Out.RegularPrint(finalFormat % tuple(formatList))
 
 
 def DetermineTableStatistics(columnName, errorCode, dataConverter, largestColumns, dataRow, currentColumnCounter):

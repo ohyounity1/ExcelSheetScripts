@@ -18,4 +18,11 @@ def IntrospectObject(object, desiredOrder, filter=None):
     
 def TranslateExcelString(excelString):
     return excelString.translate(str.maketrans('', '', ' \t\n\r'))
+
+def Tie(x, y): 
+    _0 = (x,y)
+    _1 = (y,x)
+    def Untie():
+        return (_0[0], _0[1])
+    return (_0, _1, Untie)
     
