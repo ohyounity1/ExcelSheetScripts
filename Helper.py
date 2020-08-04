@@ -2,6 +2,10 @@ from lib.Output import Out
 from lib.DataSource import DataSources
 from lib.Utility import Utility
 from lib.Constants import Constants
+from lib.Constants import Destinations
+
+from lib.Output import TableDisplay
+from lib.Output import CsvDisplay
 
 def RetrieveAllResults(sourceFile):
     Out.VerbosePrint(Out.Verbosity.LOW, 'Source File Name: {0}'.format(sourceFile))
@@ -19,29 +23,37 @@ __DefaultSelection__ = {
     '.json': [Constants.ErrorIdProperty]
 }
 
-def ConvertErrorTypeDisplayMsg(name, data):
-    if(name == 'FirstValue' or name == 'SecondValue'):
-        return str(data)
-    return data
+class ErrorDisplay:
+    def __init__(self, headerPrinter):
+        self.HeaderPrinter = headerPrinter
+    def DisplayErrors(self, source, errorCodes, selectedOrder, converter):
+        self.HeaderPrinter(f'Source Display for {source}')
+        self.__DisplayErrors__(errorCodes, selectedOrder, converter)
+    def __DisplayErrors__(self, errorCodes, selectedOrder, converter):
+        pass
 
-def ConvertDisplayMsg(name, data):
-    if(name == Constants.ErrorDisplayMsgProperty):        
-        displayMsg = ''
-        if(len(data) > Constants.MaxDisplayStringForTable):
-            displayMsg = '{}...'.format(data[0:Constants.MaxDisplayStringForTable])
-        elif(len(data) > 0):
-            displayMsg = data
-        return displayMsg
-    elif(name == Constants.ErrorDisplaysMsgProperty or name == Constants.ErrorIdProperty):
-        return str(data)
-    elif(name == Constants.ErrorTypeProperty):
-        return str(data)
-    return data
+class TableErrorDisplay(ErrorDisplay):
+    def __init__(self):
+        super().__init__(Out.RegularPrint)
+    def __DisplayErrors__(self, errorCodes, selectedOrder, converter):
+        TableDisplay.ErrorListToTableDisplay(errorCodes, selectedOrder, converter)
 
-def ErrorCodeTableDisplay(sourceFile, errorCodes, destination, selectedColumns):
-    import TableDisplay
+class CsvErrorDisplay(ErrorDisplay):
+    def __init__(self, fileName):
+        self.File = open(fileName, 'w')
+        super().__init__(self.File.write)
+    def __DisplayErrors__(self, errorCodes, selectedOrder, converter):
+        CsvDisplay.ErrorListToCSVDisplay(self.File, errorCodes, selectedOrder, converter)
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.File.close()
 
-    selectedOrder = selectedColumns
+def ErrorCodeDisplay(sourceFile, errorCodes, arguments, tableConverterMethod, exportFile, exportConverterMethod):
+    def __Wrapper__(display, sourceFile, errorCodes, selectedOrder, converter):
+        display.DisplayErrors(sourceFile, errorCodes, selectedOrder, converter)
+
+    selectedOrder = arguments.Select
 
     # Default to all available columns if nothing given by user
     if(len(selectedOrder) == 0):
@@ -57,33 +69,8 @@ def ErrorCodeTableDisplay(sourceFile, errorCodes, destination, selectedColumns):
     
     Out.VerbosePrint(Out.Verbosity.LOW, 'Items selected for display {}'.format(selectedOrder))
     
-    if(destination == 'Prompt'):
-        # Print all results to output
-        Out.RegularPrint('Source Display for {}'.format(sourceFile))
-        TableDisplay.ErrorListToTableDisplay(errorCodes, selectedOrder, ConvertDisplayMsg)
-    elif(destination == 'CSV'):
-        with open('ErrorCodesListing.csv', 'w') as csvFile:
+    __Wrapper__(TableErrorDisplay(), sourceFile, errorCodes, selectedOrder, tableConverterMethod)
 
-            # Print all results to output
-            csvFile.write('Source Display for {}'.format(sourceFile))
-            headerString = ''
-
-            for i in range(0, len(selectedOrder)):
-                headerString += f'{selectedOrder[i]}'
-                if(i < len(selectedOrder) - 1):
-                    headerString += ','
-            csvFile.write(f'\n{headerString}')
-
-            rowString = ''
-            for errorCode in errorCodes:
-                rowString = ''
-                for i in range(0, len(selectedOrder)):
-                    propertyValue = getattr(errorCode,selectedOrder[i])
-                    if(selectedOrder[i] == 'ErrorDisplayMsg'):
-                        propertyValue = propertyValue.replace('"', '""')
-                        rowString += f'"{propertyValue}"'
-                    else:
-                        rowString += f'{propertyValue}'
-                    if(i < len(selectedOrder) - 1):
-                        rowString += ','
-                csvFile.write(f'\n{rowString}')
+    if(arguments.Export is not None):
+        with CsvErrorDisplay(exportFile) as csvFile:
+            __Wrapper__(csvFile, sourceFile, errorCodes, selectedOrder, exportConverterMethod)

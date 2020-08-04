@@ -2,7 +2,7 @@ from lib.Constants import Constants
 from lib.Output import Out
 from lib.Utility import Utility
 
-import TableDisplay
+from lib.Output import TableDisplay
 
 
 class Difference:
@@ -54,7 +54,7 @@ def ActionDiffErrorCodes(errorLists, errorSources):
     
 
 def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
-    if('Diff-Types' == whatToDiff or 'Diff-All' == whatToDiff):
+    if('types' == whatToDiff):
         differenceListing = list()
         differenceCount = 0
         for first in firstSet:
@@ -65,11 +65,11 @@ def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
                         if(second.ErrorType != first.ErrorType):
                             differenceCount += 1
 
-        return differenceListing
+        return (differenceListing, differenceCount)
 
-    if('Diff-Msgs' in whatToDiff or 'Diff-All' in whatToDiff):
+    if('msg' == whatToDiff):
         differenceListing = []
-
+        differenceCount = 0
         for first in firstSet:
             for second in secondSet:
                 if(second.ErrorName == first.ErrorName):
@@ -81,6 +81,7 @@ def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
                     secondDisplayMsg = secondDisplayMsg.replace(chr(8226),"")
                     if(firstDisplayMsg != secondDisplayMsg):
                         differenceListing.append(Difference(Constants.ErrorDisplayMsgProperty, first.ErrorName, firstDisplayMsg, secondDisplayMsg))
-        return differenceListing
+                        differenceCount += 1
+        return (differenceListing, differenceCount)
 
     

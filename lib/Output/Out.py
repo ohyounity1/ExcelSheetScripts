@@ -4,8 +4,7 @@ from enum import IntEnum
 from functools import total_ordering
 
 from ..Constants import Colours
-
-__VERBOSITY__ = None
+from ..Constants import Destinations
 
 @total_ordering
 class Verbosity(IntEnum):
@@ -28,38 +27,64 @@ class Verbosity(IntEnum):
 	def __eq__(self, compare):
 		return int(self.Value) == int(self.Value)
 
-def SetVerbosity(verbosity):
-	global __VERBOSITY__
-	if(__VERBOSITY__ is None):
-		__VERBOSITY__ = Verbosity(verbosity)
-    
-def ErrorPrinter(method):
+class Logger:
+	def __init__(self, file):
+		self.Logger = open(file, 'w')
+	def Write(self, msg):
+		self.Logger.write(f'\n{msg}')
+
+# Error printing
+def ErrorPrinter():
     def __ErrorPrinter__(output):
         # Wrap around fail text first
-        method(Colours.Colours.FailText(output))
+        print(Colours.Colours.FailText(output))
         # Now close application
         exit()
     # Return the decorator
     return __ErrorPrinter__
 
 #Default to basic output
-ErrorPrint = ErrorPrinter(print)
+ErrorPrint = ErrorPrinter()
+
+# Define the various out plugins for printing the program's output
+__OUT_PLUGINS__ = {}
+
+def RegisterOutPlugin(index, method):
+	__OUT_PLUGINS__[index] = method
+
+# Regular output goes to print
+RegisterOutPlugin(Destinations.Destinations.Prompt, print)
+# For null, do nothing
+RegisterOutPlugin(Destinations.Destinations.Null, lambda *args: None)
 
 
-def VerbosePrinter(printer):
+def LogPrint(fileName):
+	logger = Logger(fileName)
+	def __LOGGER__(msg):
+		logger.Write(msg)
+	return __LOGGER__
+
+def PrintPlugin(index):
+	printer = __OUT_PLUGINS__[index]
+	def __PRINTER__(msg):
+		printer(msg)
+	return __PRINTER__
+
+def VerbosePrinter(setLevel, index):
+	printer = __OUT_PLUGINS__[index]
 	def __VerbosePrinter__(level, output):
-		global __VERBOSITY__
-		if(level <= __VERBOSITY__):
+		if(level <= setLevel):
 			printer(output)
 	return __VerbosePrinter__
 
-# Default to basic output
-VerbosePrint = VerbosePrinter(print)
+# Default to basic output (and no verbosity)
+VerbosePrint = VerbosePrinter(0, Destinations.Destinations.Prompt)
 
-def RegularPrinter(printer):
+def RegularPrinter(index):
+	printer = __OUT_PLUGINS__[index]
 	def __RegularPrinter__(output):
 		printer(output)
 	return __RegularPrinter__
 
 #Default main output to print
-RegularPrint = RegularPrinter(print)
+RegularPrint = RegularPrinter(Destinations.Destinations.Prompt)

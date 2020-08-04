@@ -56,9 +56,9 @@ def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]
         colPositions = __DefineKnownColumnLocations(sheet)
         
         for i in range(1, sheet.nrows):
-            errorCodeName = sheet.cell_value(i, colPositions[0])
+            errorCodeName = sheet.cell_value(i, colPositions[0]).strip()
             errorCodeId = sheet.cell_value(i, colPositions[1])
-            errorCodeTypeStr = sheet.cell_value(i, colPositions[2])
+            errorCodeTypeStr = sheet.cell_value(i, colPositions[2]).strip()
             
             errorCodeType = ''
             if('Service Call' in errorCodeTypeStr):
@@ -68,8 +68,8 @@ def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]
             elif('Warning' in errorCodeTypeStr):
                 errorCodeType = ErrorCode.ErrorType.Warning()
                 
-            errorCodeDisplaysMsg = (lambda x: x == 'Y')(sheet.cell_value(i, colPositions[3]))
-            errorCodeDisplayMsg = sheet.cell_value(i, colPositions[4])
+            errorCodeDisplaysMsg = (lambda x: x.lower() == 'y' or x.lower() == 'yes')(sheet.cell_value(i, colPositions[3]).strip())
+            errorCodeDisplayMsg = sheet.cell_value(i, colPositions[4]).strip()
             
             Out.VerbosePrint(Out.Verbosity.HIGH, 'Read in Excel Sheet Line: {}, {}, {}'.format(errorCodeName, ErrorId(errorCodeId), str(errorCodeType)))
             if(errorCodeName != '' and errorCodeName[0] != '/'):

@@ -1,20 +1,115 @@
 import sys
 import difflib
 
+from pathlib import Path
+
 import AppInitialization
 
 from lib.Constants import Constants
 from lib.Constants import ActionTypes
+from lib.Constants import Destinations
 from lib.Utility import Utility
 from lib.DataSource import DataSources
+from lib.Output import TableDisplay
+from lib.Output import CsvDisplay
 
 import Helper
-import TableDisplay
 
 # Program begins here, parse the command line options
 arguments = AppInitialization.ParseCommandLine()
 
 from lib.Output import Out
+
+def ConvertErrorTypeDiffDisplayMsg(name, data):
+    if(name == 'FirstValue' or name == 'SecondValue'):
+        return str(data)
+    return data
+
+def ConvertTableDisplayMsg(name, data):
+    if(name == Constants.ErrorDisplayMsgProperty):        
+        displayMsg = ''
+        if(len(data) > Constants.MaxDisplayStringForTable):
+            displayMsg = '{}...'.format(data[0:Constants.MaxDisplayStringForTable])
+        elif(len(data) > 0):
+            displayMsg = data
+        return displayMsg
+    elif(name == Constants.ErrorDisplaysMsgProperty or name == Constants.ErrorIdProperty):
+        return str(data)
+    elif(name == Constants.ErrorTypeProperty):
+        return str(data)
+    return data
+
+def ConvertCSVOutput(name, data):
+    if(name == 'ErrorDisplayMsg'):
+        data = data.replace('"', '""')
+        rowString = f'"{data}"'
+    else:
+        rowString = f'{data}'
+    return rowString
+
+class DiffClass:
+    def Write(self, msg):
+        pass
+    def Diff(diffs, properties):
+        pass
+
+class CompositeDiffClass(DiffClass):
+    def __init__(self, composed):
+        self.Composed = composed
+    def Write(self, msg):
+        for c in self.Composed:
+            c.Write(msg)
+    def Diff(self, diffs, properties):
+        for c in self.Composed:
+            c.Diff(diffs, properties)
+
+class SingleDiffClassBase(DiffClass):
+    def __init__(self, formatter, output, converter=None):
+        self.Formatter = formatter
+        self.Output = output
+        self.Converter = converter
+    def Write(self, msg):
+        msg = self.Formatter(msg)
+        self.Output(msg)
+
+class TableDiff(SingleDiffClassBase):
+    def __init__(self, converter=None):
+        def __FORMATTER__(msg):
+            return msg
+        super().__init__(__FORMATTER__, Out.RegularPrint, converter)
+        self.Converter = converter
+    def Diff(self, diffs, properties):
+        TableDisplay.ErrorListToTableDisplay(diffs, properties, self.Converter)
+
+class CsvDiff(SingleDiffClassBase):
+    def __init__(self, fileName, converter=None):
+        def __FORMATTER__(msg):
+            return f'\n{msg}'
+        self.File = open(fileName + '.csv', 'w')
+        super().__init__(__FORMATTER__, self.File.write, converter)
+    def Diff(self, diffs, properties):
+        CsvDisplay.ErrorListToCSVDisplay(self.File, diffs, properties, self.Converter)
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_value, exc_traceback ):
+        self.File.close()
+
+def DiffDisplay(differ, diffs, properties, msgs):
+    for msg in msgs:
+        differ.Write(msg)
+    differ.Diff(diffs, properties)
+
+def MakeTableDiff(action):
+    tableDiff = TableDiff()
+    if(action == 'types'):
+        tableDiff = TableDiff(ConvertErrorTypeDiffDisplayMsg)
+    return tableDiff
+
+def MakeCsvDiff(action):
+    tableDiff = CsvDiff(action)
+    if(action == 'types'):
+        tableDiff = CsvDiff(action, ConvertErrorTypeDiffDisplayMsg)
+    return tableDiff
 
 Out.VerbosePrint(Out.Verbosity.MEDIUM, 'Input files {0}'.format(arguments.Source))
 
@@ -30,65 +125,49 @@ if(len(arguments.Source) > 1):
     secondarySourceFile = arguments.Source[1]
     secondarySourceResults = Helper.RetrieveAllResults(secondarySourceFile)
     
-if(arguments.destination == 'Null'):
-    exit()
-    
-if('Display' in arguments.Action):
-    Helper.ErrorCodeTableDisplay(mainSourceFile, mainSourceResults, arguments.destination, arguments.Select)
-    
+if(len(arguments.DiffActions) == 0):
+    Helper.ErrorCodeDisplay(mainSourceFile, mainSourceResults, arguments, ConvertTableDisplayMsg, f'{Path(mainSourceFile).stem}_Export.csv', ConvertCSVOutput)
     if(secondarySourceResults is not None):
-        Helper.ErrorCodeTableDisplay(secondarySourceFile, secondarySourceResults, arguments.destination, arguments.Select)
-elif(arguments.destination == 'CSV' and 'Display' in arguments.Action):
-    with open('ErrorCodesListing.csv', 'w') as csvFile:
+        Helper.ErrorCodeDisplay(secondarySourceFile, secondarySourceResults, arguments, ConvertTableDisplayMsg, f'{Path(secondarySourceFile).stem}_Export.csv', ConvertCSVOutput)
 
-        # Print all results to output
-        csvFile.write('Main Source Display {}'.format(mainSourceFile))
-    
-        csvFile.write(f'\n')
-    
-        if(secondarySourceResults is not None):
-            Out.RegularPrint('Secondary Source Display {}'.format(secondarySourceFile))
-            Helper.ErrorCodeTableDisplay(secondarySourceFile, secondarySourceResults, arguments.Select)
-
-
-if(len(arguments.Action) > 0 and secondarySourceResults != None):
+if(len(arguments.DiffActions) > 0 and secondarySourceResults != None):
+    differs = dict()
+    if(arguments.Destination == 'prompt' and arguments.Export == 'csv'):
+        for action in arguments.DiffActions:
+            tableDiff = MakeTableDiff(action)
+            differs[action] = CompositeDiffClass([MakeTableDiff(action), MakeCsvDiff(action)])
+    elif(arguments.Export == 'csv'):
+        differs = {action: MakeCsvDiff(action) for differ in differs}
+    elif(arguments.Destination == 'prompt'):
+        for action in arguments.DiffActions:
+            tableDiff = MakeTableDiff(action)
+            differs[action] = tableDiff
+    else:
+        exit()
+    #MainPrintout(OutputFormatter.CSVFormat, csvFile.write, lambda d, p: CsvDisplay.ErrorListToCSVDisplay(csvFile, d, p))
     import DiffAction
-    for action in arguments.Action:
-        if(action == 'Diff-Codes' or action == 'Diff-All'):
+
+    for action in arguments.DiffActions:
+        if(action == 'codes'):
             diffs = DiffAction.ActionDiffErrorCodes(Utility.Tie(mainSourceResults, secondarySourceResults), Utility.Tie(mainSourceFile, secondarySourceFile))
             if(len(diffs) > 0):
-                if(arguments.destination == 'Prompt'):
-                    Out.RegularPrint('ERROR CODE SUMMARY:::::')
-                    Out.RegularPrint('--LeftSource = \n---- Errors in {}, but not in {}\n--RightSource = \n---- Errors in {}, but not in {}\n--TotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, secondarySourceFile, mainSourceFile, len(diffs)))
-                    TableDisplay.ErrorListToTableDisplay(diffs, ['ErrorCodeLeft', 'ErrorCodeRight'])
-                elif(arguments.destination == 'CSV'):
-                    with open('ErrorCodesDiff.csv', 'w') as csvFile:
-                        csvFile.write('ERROR CODE SUMMARY:::::')
-                        csvFile.write('\nLeftSource = \n\tErrors in {}, but not in {}\nRightSource = \n\tErrors in {}, but not in {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, secondarySourceFile, mainSourceFile, len(diffs)))
-                        csvFile.write('\nLeftSource, RightSource')
-                        for diff in diffs:
-                            csvFile.write('\n{},{}'.format(diff.ErrorCodeLeft, diff.ErrorCodeRight))
-        if(action == 'Diff-Types' or action == 'Diff-All'):
-            diffs = DiffAction.ActionDiffOnErrorLists(mainSourceResults, secondarySourceResults, action, arguments.DiffShowAll)
+                msgs = ['ERROR CODE SUMMARY:::::',
+                    '\n\tLeftSource = \n\t\tErrors in {}, but not in {}\n\tRightSource = \n\t\tErrors in {}, but not in {}\n\tTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, secondarySourceFile, mainSourceFile, len(diffs))]
+                DiffDisplay(differs[action], diffs, ['ErrorCodeLeft', 'ErrorCodeRight'], msgs)
+        if(action == 'types'):
+            diffs, count = DiffAction.ActionDiffOnErrorLists(mainSourceResults, secondarySourceResults, action, arguments.DiffShowAll)
             if(len(diffs) > 0):
-                if(arguments.destination == 'Prompt'):
-                    Out.RegularPrint('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, len(diffs)))
-                    TableDisplay.ErrorListToTableDisplay(diffs, ['ErrorCodeName', 'FirstValue', 'SecondValue'], Helper.ConvertErrorTypeDisplayMsg)
-                elif(arguments.destination == 'CSV'):
-                    with open('ErrorTypesDiff.csv', 'w') as csvFile:
-                        csvFile.write('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, len(diffs)))
-                        csvFile.write('\nErrorCodeName,FirstValue, SecondValue')
-                        for diff in diffs:
-                            csvFile.write('\n{},{},{}'.format(diff.ErrorCodeName, str(diff.FirstValue), str(diff.SecondValue)))
-        if(action == 'Diff-Msgs' or action == 'Diff-All'):
-            diffs = DiffAction.ActionDiffOnErrorLists(mainSourceResults, secondarySourceResults, action, arguments.DiffShowAll)
+                msgs = ['FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count)]
+                DiffDisplay(differs[action], diffs, ['ErrorCodeName', 'FirstValue', 'SecondValue'], msgs)
+        if(action == 'msgs' or action == 'all'):
+            diffs, count= DiffAction.ActionDiffOnErrorLists(mainSourceResults, secondarySourceResults, action, arguments.DiffShowAll)
             if(len(diffs) > 0):
                 csvFile = None
-                if(arguments.destination == 'Prompt'):
-                    Out.RegularPrint('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, len(diffs)))
-                elif(arguments.destination == 'CSV'):
+                if(arguments.Destination == 'Prompt'):
+                    Out.RegularPrint('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count))
+                if(arguments.Export == 'csv'):
                     csvFile = open('ErrorMsgsDiff.csv', 'w')
-                    csvFile.write('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, len(diffs)))
+                    csvFile.write('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count))
                     csvFile.write('\nErrorCode, Reason, FirstValue, SecondValue')
             for x in diffs:
                 first = x.FirstValue
@@ -117,9 +196,9 @@ if(len(arguments.Action) > 0 and secondarySourceResults != None):
                             if(i < len(second)):
                                 second = second[:i] + '[' + second[i] + ']' + second[i+1:]
                             break
-                if(arguments.destination == 'Prompt'):
+                if(arguments.Destination == 'Prompt'):
                     Out.RegularPrint('\n{}\n--Summary:{}\n----{}\n------{}\n----{}\n------{}\n'.format(x.ErrorCodeName, reasonString, mainSourceFile, first, secondarySourceFile, second))
-                elif(arguments.destination == 'CSV'):
+                if(arguments.Export == 'CSV'):
                     csvFile.write('\n{},{},{},{}'.format(x.ErrorCodeName, reasonString, first, second))
 
             if(csvFile is not None):
