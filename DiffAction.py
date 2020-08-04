@@ -67,7 +67,7 @@ def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
 
         return (differenceListing, differenceCount)
 
-    if('msg' == whatToDiff):
+    if('msgs' == whatToDiff):
         differenceListing = []
         differenceCount = 0
         for first in firstSet:

@@ -4,7 +4,10 @@ class DiffActions:
     MSGS = 'msgs'
     def Values():
     	return [DiffActions.CODES, DiffActions.TYPES, DiffActions.MSGS]
-    def Iter():
-    	yield DiffActions.CODES
-    	yield DiffActions.TYPES
-    	yield DiffActions.MSGS
+
+class ValidateActions:
+	MODULES = 'modules'
+	MSG = 'msg'
+	HASMSG = 'hasmsg'
+	def Values():
+		return [ValidateActions.MODULES, ValidateActions.MSG, ValidateActions.HASMSG]

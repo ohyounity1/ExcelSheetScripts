@@ -2,6 +2,7 @@ import sys
 import difflib
 
 from pathlib import Path
+from collections import namedtuple
 
 import AppInitialization
 
@@ -120,31 +121,47 @@ mainSourceResults = Helper.RetrieveAllResults(mainSourceFile)
 secondarySourceFile = None
 secondarySourceResults = None
 
+sourceCenters = list()
+sourceCenters.append(DataSources.SourceCenter(SourceName=mainSourceFile, SourceResults=mainSourceResults))
+
 # We have a secondary source file
 if(len(arguments.Source) > 1):
     secondarySourceFile = arguments.Source[1]
     secondarySourceResults = Helper.RetrieveAllResults(secondarySourceFile)
-    
+    sourceCenters.append(DataSources.SourceCenter(SourceName=secondarySourceFile, SourceResults=secondarySourceResults))
+
+# Only display the source file contents to the output display IF NOT doing any diff/validation actions
 if(len(arguments.DiffActions) == 0):
-    Helper.ErrorCodeDisplay(mainSourceFile, mainSourceResults, arguments, ConvertTableDisplayMsg, f'{Path(mainSourceFile).stem}_Export.csv', ConvertCSVOutput)
-    if(secondarySourceResults is not None):
-        Helper.ErrorCodeDisplay(secondarySourceFile, secondarySourceResults, arguments, ConvertTableDisplayMsg, f'{Path(secondarySourceFile).stem}_Export.csv', ConvertCSVOutput)
+    for sourceCenter in sourceCenters:
+        with DataSources.ExportSources() as exportSources:
+            sourceStrategies = list()
+            sourceStrategies.append(DataSources.SourceStrategy(PrintHeader=Out.RegularPrint, 
+                HandleErrorCode=TableDisplay.ErrorListToTableDisplay,
+                ConvertData=ConvertTableDisplayMsg))
+        
+            if(arguments.Export is not None):
+                exportFileName = f'{Path(sourceCenter.SourceName).stem}_Export.csv'
+                exportFile = open(exportFileName, 'w')
+                exportSources += exportFile
+                sourceStrategies.append(DataSources.SourceStrategy(PrintHeader=exportFile.write, 
+                    HandleErrorCode=lambda errors, selections, converter: CsvDisplay.ErrorListToCSVDisplay(exportFile, errors, selections, converter),
+                    ConvertData=ConvertCSVOutput))
+            Helper.ErrorCodeHandler(sourceStrategies)(sourceCenter.SourceName, sourceCenter.SourceResults, arguments)
 
 if(len(arguments.DiffActions) > 0 and secondarySourceResults != None):
     differs = dict()
-    if(arguments.Destination == 'prompt' and arguments.Export == 'csv'):
+    if(arguments.Destination != 'null' and arguments.Export == 'csv'):
         for action in arguments.DiffActions:
             tableDiff = MakeTableDiff(action)
             differs[action] = CompositeDiffClass([MakeTableDiff(action), MakeCsvDiff(action)])
     elif(arguments.Export == 'csv'):
         differs = {action: MakeCsvDiff(action) for differ in differs}
-    elif(arguments.Destination == 'prompt'):
+    elif(arguments.Destination != 'null'):
         for action in arguments.DiffActions:
             tableDiff = MakeTableDiff(action)
             differs[action] = tableDiff
     else:
         exit()
-    #MainPrintout(OutputFormatter.CSVFormat, csvFile.write, lambda d, p: CsvDisplay.ErrorListToCSVDisplay(csvFile, d, p))
     import DiffAction
 
     for action in arguments.DiffActions:
@@ -159,14 +176,14 @@ if(len(arguments.DiffActions) > 0 and secondarySourceResults != None):
             if(len(diffs) > 0):
                 msgs = ['FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count)]
                 DiffDisplay(differs[action], diffs, ['ErrorCodeName', 'FirstValue', 'SecondValue'], msgs)
-        if(action == 'msgs' or action == 'all'):
+        if(action == 'msgs'):
             diffs, count= DiffAction.ActionDiffOnErrorLists(mainSourceResults, secondarySourceResults, action, arguments.DiffShowAll)
             if(len(diffs) > 0):
                 csvFile = None
-                if(arguments.Destination == 'Prompt'):
+                if(arguments.Destination != 'null'):
                     Out.RegularPrint('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count))
                 if(arguments.Export == 'csv'):
-                    csvFile = open('ErrorMsgsDiff.csv', 'w')
+                    csvFile = open(action + '.csv', 'w')
                     csvFile.write('FirstValue = {}\nSecondValue = {}\nTotalDifferences = {}'.format(mainSourceFile, secondarySourceFile, count))
                     csvFile.write('\nErrorCode, Reason, FirstValue, SecondValue')
             for x in diffs:
@@ -196,12 +213,38 @@ if(len(arguments.DiffActions) > 0 and secondarySourceResults != None):
                             if(i < len(second)):
                                 second = second[:i] + '[' + second[i] + ']' + second[i+1:]
                             break
-                if(arguments.Destination == 'Prompt'):
+                if(arguments.Destination != 'null'):
                     Out.RegularPrint('\n{}\n--Summary:{}\n----{}\n------{}\n----{}\n------{}\n'.format(x.ErrorCodeName, reasonString, mainSourceFile, first, secondarySourceFile, second))
-                if(arguments.Export == 'CSV'):
+                if(arguments.Export == 'csv'):
                     csvFile.write('\n{},{},{},{}'.format(x.ErrorCodeName, reasonString, first, second))
 
             if(csvFile is not None):
                 csvFile.close()
+
+if(len(arguments.ValidateActions) > 0):
+    for validation in arguments.ValidateActions:
+        if(validation == ActionTypes.ValidateActions.MODULES):
+            validateList = []
+
+            if(Path(mainSourceFile).suffix == '.json'):
+                validateList = mainSourceResults
+            elif(Path(secondarySourceFile).suffix == '.json'):
+                validateList = secondarySourceResults
+
+            for ec in validateList:
+                errorCodeName = ec.ErrorName
+                errorCodeModule = ec.ErrorModule
+
+                if('HANDLER' in errorCodeName):
+                    if(errorCodeModule != 'PlateHandler'):
+                        print(f'Suggest making {errorCodeName} module be PlateHandler and not {errorCodeModule}')
+                elif('DG' in errorCodeName):
+                    if(errorCodeModule != 'DG'):
+                        print(f'Suggest making {errorCodeName} module be DG and not {errorCodeModule}')
+                elif('DR' in errorCodeName):
+                    if(errorCodeModule != 'DR'):
+                        print(f'Suggest making {errorCodeName} module be DR and not {errorCodeModule}')
+
+
 
 

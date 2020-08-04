@@ -1,3 +1,5 @@
+from collections import namedtuple
+
 from ..Constants import Constants
 from ..ErrorHandling import BadFileNameException
 from ..ErrorCodes import ErrorCode
@@ -28,3 +30,19 @@ def RetrieveErrorCodes(filePath) -> [ErrorCode.ErrorCode]:
         return allErrorCodes
 
     raise BadFileNameException.BadFileNameException(extension)
+
+SourceCenter = namedtuple('SouceCenter', ['SourceName', 'SourceResults'])
+SourceStrategy = namedtuple('SourceStrategy', ['PrintHeader', 'HandleErrorCode', 'ConvertData'])
+
+class ExportSources:
+    def __init__(self):
+        self.ExportFiles = list()
+    def __add__(self, file):
+        self.ExportFiles.append(file)
+    def __iadd__(self, file):
+        self.ExportFiles.append(file)        
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_value, exc_stacktrace):
+        [f.close() for f in self.ExportFiles]
+
