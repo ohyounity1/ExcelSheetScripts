@@ -40,6 +40,9 @@ def ParseCommandLine():
 
     arguments = parser.parse_args()
 
+    return arguments
+
+def InitializeApp(arguments):
     # Only allow so many source files!    
     if(len(arguments.Source) > Constants.MaxSourceArguments):
         Out.ErrorPrint('Too many source arguments!  Only {} are allowed...'.format(Constants.MaxSourceArguments))
@@ -64,4 +67,3 @@ def ParseCommandLine():
         Out.RegisterOutPlugin(Destinations.Destinations.File, Out.LogPrint('Output.Log'))
 
     Out.RegularPrint = Out.RegularPrinter(arguments.Destination)
-    return arguments

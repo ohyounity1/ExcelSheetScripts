@@ -22,7 +22,7 @@ class ModuleTypesValidator(DiffAnalyzers.DifferenceAnalyzer):
         if(Path(self.MainSourceFile).suffix == '.json'):
             validateList = mainSource
             chosenSourceFile = self.MainSourceFile
-        elif(Path(self.SecondarySourceFile).suffix == '.json'):
+        elif(self.SecondarySourceFile is not None and Path(self.SecondarySourceFile).suffix == '.json'):
             validateList = secondarySource
             chosenSourceFile = self.SecondarySourceFile
 
@@ -91,28 +91,70 @@ class ModuleTypesValidator(DiffAnalyzers.DifferenceAnalyzer):
 
     def __MSG_HEADERS__(self, count):
         return ['MODULE SUGGESTIONS SUMMARY:::::',
-            f'\n\t\n\tTotalDifferences = {count}']
+            f'\n\tTotalDifferences = {count}']
 
+
+@dataclass
+class HasMsgValidation:
+    ErrorCodeName: str
+    HasMsgValue: bool
+    SuggestedValue: bool
+    Message: str = ""
+
+class HasMsgValidator(DiffAnalyzers.DifferenceAnalyzer):
+    def __RUN_ANALYZER__(self, mainSource, secondarySource, action, showAll):
+        print("here!")
+        validations = []
+        actualCount = 0
+
+        for ec in mainSource:
+            errorCodeName = ec.ErrorName
+            hasMsg = ec.ErrorDisplaysMsg
+            msg = ec.ErrorDisplayMsg
+
+            mismatch = False
+            if(hasMsg and len(msg) == 0):
+                mismatch = True
+                Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with msg, but the message is empty!')
+            elif(hasMsg == False and len(msg) > 0):
+                mismatch = True
+                Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with no msg, but the message is {msg}!')
+
+            if(self.Arguments.DiffShowAll or mismatch):
+                validations.append(HasMsgValidation(errorCodeName, hasMsg, hasMsg == False, msg))
+
+        return validations, actualCount
+
+    def __MSG_HEADERS__(self, count):
+        return ['HAS MESSAGE SUMMARY:::::',
+            f'\n\tTotalDifferences = {count}']
 
 def MakeTableDiff(action):
     tableDiff = DiffClasses.TableDiff()
     if(action == 'modules'):
         tableDiff = DiffClasses.TableDiff(Converters.TableModuleValidationDataConverter)
+    elif(action == 'hasmsg'):
+        tableDiff = DiffClasses.TableDiff(Converters.TableModuleHasMsgValidationDataConverter)
     return tableDiff
 
 def MakeCsvDiff(action):
     csvDiff = DiffClasses.CsvDiff(action + '_validation')
     if(action == 'modules'):
         csvDiff = DiffClasses.CsvDiff(action + '_validation', Converters.CsvModuleValidationDataConverter)
+    elif(action == 'hasmsg'):
+        csvDiff = DiffClasses.CsvDiff(action + '_validation', Converters.CsvModuleHasMsgValidationDataConverter)
     return csvDiff            
 
 DiffFactory = DiffClasses.DifferFactoryDecor(MakeTableDiff, MakeCsvDiff)
 
 def ValidatorFactory(mainSourceFile, secondarySourceFile, arguments, action):
     __VALIDATOR_PROPERTIES__ = {
-        'modules': ['ErrorCodeName', 'CurrentModule', 'SuggestedModules']
+        'modules': ['ErrorCodeName', 'CurrentModule', 'SuggestedModules'],
+        'hasmsg': ['ErrorCodeName', 'HasMsgValue', 'SuggestedValue', 'Message']
     }
     properties = __VALIDATOR_PROPERTIES__[action]
     differ = DiffFactory(arguments, action)
     if(action == 'modules'):
         return ModuleTypesValidator(mainSourceFile, secondarySourceFile, differ, properties, arguments, action)
+    elif(action == 'hasmsg'):
+        return HasMsgValidator(mainSourceFile, secondarySourceFile, differ, properties, arguments, action)

@@ -36,3 +36,22 @@ def CsvModuleValidationDataConverter(name, data):
     if(name == 'SuggestedModules'):
         return f'"{TableModuleValidationDataConverter(name, data)}"'
     return data
+
+
+def TableModuleHasMsgValidationDataConverter(name, data):
+    if(name == 'Message'):        
+        displayMsg = data
+        if(len(data) > Constants.MaxDisplayStringForTable):
+            displayMsg = '{}...'.format(data[0:Constants.MaxDisplayStringForTable])
+        return displayMsg
+    if(name == 'HasMsgValue' or name == 'SuggestedValue'):
+        return str(data)
+    return data
+
+def CsvModuleHasMsgValidationDataConverter(name, data):
+    if(name == 'Message'):        
+        data = data.replace('"', '""')
+        return f'"{data}"'
+    if(name == 'HasMsgValue' or name == 'SuggestedValue'):
+        return str(data)
+    return data
