@@ -4,6 +4,10 @@ from lib.Constants import Constants
 from lib.ErrorCodes import ErrorCode
 from lib.Output import Out
 
+from . import DataSources
+
+@DataSources.RetrieveAllResults
+@DataSources.RetrieveErrorCodes
 def JsonFileErrorCodeListing(fileName, allErrorCodes):
     with open(fileName) as jsonFileContents:
         errorCodesJson = json.load(jsonFileContents)

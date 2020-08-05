@@ -5,34 +5,36 @@ from ..ErrorHandling import BadFileNameException
 from ..ErrorCodes import ErrorCode
 from ..Output import Out
 
-from . import ExcelConversion
-from . import JsonConversion
+def RetrieveAllResults(retriever):
+    def __INTERNAL__(filePath):
 
-__DataSources__ = {
-    '.xls' : ExcelConversion.ExcelSheetErrorCodeListing,
-    '.xlsx': ExcelConversion.ExcelSheetErrorCodeListing,
-    '.json': JsonConversion.JsonFileErrorCodeListing
-}
+        Out.VerbosePrint(Out.Verbosity.LOW, 'Source File Name: {0}'.format(filePath))
+        errorCodes = retriever(filePath)
 
-def RetrieveErrorCodes(filePath) -> [ErrorCode.ErrorCode]:
-    from pathlib import Path
+        if(errorCodes is None or len(errorCodes) == 0):
+            Out.ErrorPrint('There were no error codes found in {}!'.format(filePath))
 
-    extension = Path(filePath).suffix
+        return errorCodes
+    return __INTERNAL__
 
-    allErrorCodes = []
+def RetrieveErrorCodes(conversion):
+    def __INTERNAL__(filePath):
+        allErrorCodes = []
 
-    source = __DataSources__.get(extension)
+        if(filePath is not None):
+            Out.VerbosePrint(Out.Verbosity.LOW, 'Reading in error codes from file of type {}'.format(filePath))
+            conversion(filePath, allErrorCodes)
+            Out.VerbosePrint(Out.Verbosity.LOW, 'Read in {} error codes from source {}'.format(len(allErrorCodes), filePath))
+            return allErrorCodes
+    
+        raise BadFileNameException.BadFileNameException(extension)
+    return __INTERNAL__
 
-    if(source is not None):
-        Out.VerbosePrint(Out.Verbosity.LOW, 'Reading in error codes from file of type {}'.format(extension))
-        source(filePath, allErrorCodes)
-        Out.VerbosePrint(Out.Verbosity.LOW, 'Read in {} error codes from source {}'.format(len(allErrorCodes), filePath))
-        return allErrorCodes
-
-    raise BadFileNameException.BadFileNameException(extension)
 
 SourceCenter = namedtuple('SouceCenter', ['SourceName', 'SourceResults'])
 SourceStrategy = namedtuple('SourceStrategy', ['PrintHeader', 'HandleErrorCode', 'ConvertData'])
+
+
 
 class ExportSources:
     def __init__(self):

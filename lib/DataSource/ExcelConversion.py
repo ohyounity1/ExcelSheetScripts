@@ -6,6 +6,8 @@ from ..Utility import Utility
 
 from ..Output import Out
 
+from . import DataSources
+
 def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
     errorNameCol = None
     errorIdCol = None
@@ -42,6 +44,8 @@ def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
         
     return (errorNameCol, errorIdCol, errorTypeCol, errorDisplaysMsgCol, errorDisplayMsgCol)
 
+@DataSources.RetrieveAllResults
+@DataSources.RetrieveErrorCodes
 def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]:
     import xlrd 
 

@@ -1,21 +1,13 @@
+from collections import namedtuple
+
 from lib.Constants import Constants
+from lib.Constants import TableSelections
 from lib.Output import Out
 from lib.Utility import Utility
 
 from lib.Output import TableDisplay
 
-
-class Difference:
-    def __init__(self, propertyName, errorCodeName, firstValue, secondValue):
-        self.PropertyName = propertyName
-        self.ErrorCodeName = errorCodeName
-        self.FirstValue = firstValue
-        self.SecondValue = secondValue
-
-class ErrorCodeDifference:
-    def __init__(self, errorCodeLeft, errorCodeRight):
-        self.ErrorCodeLeft = errorCodeLeft
-        self.ErrorCodeRight = errorCodeRight
+Difference = namedtuple('Difference', ['ErrorCodeName', 'FirstValue', 'SecondValue'])
 
 def CompareLists(firstList, secondList):
     comparison = list()
@@ -31,26 +23,23 @@ def CompareLists(firstList, secondList):
 
     return comparison
 
-def ActionDiffErrorCodes(errorLists, errorSources):
+def ActionDiffErrorCodes(errorLists):
     tiedResults = (CompareLists(*errorLists[0]), CompareLists(*errorLists[1]))
-    # Untie method is packed in last argument of packed argument
-    untieSources = errorSources[-1]
-    firstSource, secondSource = untieSources()
 
     differenceListing = list()
     outerIndex = 0
     while(outerIndex < len(tiedResults[0])):
         if(outerIndex < len(tiedResults[1])):
-            differenceListing.append(ErrorCodeDifference(tiedResults[0][outerIndex], tiedResults[1][outerIndex]))
+            differenceListing.append(Difference('', tiedResults[0][outerIndex], tiedResults[1][outerIndex]))
         else:
-            differenceListing.append(ErrorCodeDifference(tiedResults[0][outerIndex], ''))
+            differenceListing.append(Difference('', tiedResults[0][outerIndex], ''))
         outerIndex += 1
 
     while(outerIndex < len(tiedResults[1])):
-        differenceListing.append(ErrorCodeDifference('', tiedResults[1][outerIndex]))
+        differenceListing.append(Difference('', '', tiedResults[1][outerIndex]))
         outerIndex += 1
 
-    return differenceListing
+    return differenceListing, len(differenceListing)
     
 
 def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
@@ -61,7 +50,7 @@ def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
             for second in secondSet:
                 if(second.ErrorName == first.ErrorName):
                     if(showAll or second.ErrorType != first.ErrorType):
-                        differenceListing.append(Difference(Constants.ErrorTypeProperty, first.ErrorName, first.ErrorType, second.ErrorType))
+                        differenceListing.append(Difference(first.ErrorName, first.ErrorType, second.ErrorType))
                         if(second.ErrorType != first.ErrorType):
                             differenceCount += 1
 
@@ -79,9 +68,10 @@ def ActionDiffOnErrorLists(firstSet, secondSet, whatToDiff, showAll=False):
                     secondDisplayMsg = second.ErrorDisplayMsg.translate(str.maketrans('','',' \t\r\n'))
                     secondDisplayMsg = secondDisplayMsg.replace(chr(183),"")
                     secondDisplayMsg = secondDisplayMsg.replace(chr(8226),"")
-                    if(firstDisplayMsg != secondDisplayMsg):
-                        differenceListing.append(Difference(Constants.ErrorDisplayMsgProperty, first.ErrorName, firstDisplayMsg, secondDisplayMsg))
-                        differenceCount += 1
+                    if(showAll or firstDisplayMsg != secondDisplayMsg):
+                        differenceListing.append(Difference(first.ErrorName, firstDisplayMsg, secondDisplayMsg))
+                        if(firstDisplayMsg != secondDisplayMsg):
+                            differenceCount += 1
         return (differenceListing, differenceCount)
 
     

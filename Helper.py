@@ -7,19 +7,9 @@ from lib.Constants import Destinations
 from lib.Output import TableDisplay
 from lib.Output import CsvDisplay
 
-def RetrieveAllResults(sourceFile):
-    Out.VerbosePrint(Out.Verbosity.LOW, 'Source File Name: {0}'.format(sourceFile))
-
-    errorCodes = DataSources.RetrieveErrorCodes(sourceFile)
-
-    if(errorCodes is None or len(errorCodes) == 0):
-        Out.ErrorPrint('There were no error codes found in {}!'.format(sourceFile))
-
-    return errorCodes
-
 def ErrorCodeHandler(errorCodeHandlers):
     errorCodeHandlersCaptures = errorCodeHandlers
-    def __INTERNAL__(sourceFile, errorCodes, arguments):
+    def __INTERNAL__(object, sourceFile, errorCodes, arguments):
         __DefaultRemoveFromSelection__ = {
            '.xls' : [Constants.ErrorModuleProperty],
            '.xlsx': [Constants.ErrorModuleProperty],
@@ -40,7 +30,17 @@ def ErrorCodeHandler(errorCodeHandlers):
                 Constants.ErrorDisplayMsgProperty], lambda e: e not in __DefaultRemoveFromSelection__[extension])
         
         Out.VerbosePrint(Out.Verbosity.LOW, 'Items selected for display {}'.format(selectedOrder))
-        for handlers in errorCodeHandlersCaptures:
-            handlers.PrintHeader(f'Source Display for {sourceFile}')
-            handlers.HandleErrorCode(errorCodes, selectedOrder, handlers.ConvertData)
+        #for handlers in errorCodeHandlersCaptures:
+        #    handlers.PrintHeader(f'Source Display for {sourceFile}')
+        #    handlers.HandleErrorCode(errorCodes, selectedOrder, handlers.ConvertData)
+        errorCodeHandlers(object, sourceFile, errorCodes, selectedOrder)
     return __INTERNAL__
+
+class SourceStrategyComposite:
+    def __init__(self, strategies):
+        self.Strategies = strategies
+    @ErrorCodeHandler
+    def Execute(self, sourceFile, errorCodes, selectedOrder):
+        for strategy in self.Strategies:
+            strategy.PrintHeader(f'Source Display for {sourceFile}')
+            strategy.HandleErrorCode(errorCodes, selectedOrder, strategy.ConvertData)    
