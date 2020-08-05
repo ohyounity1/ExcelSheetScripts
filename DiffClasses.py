@@ -148,11 +148,11 @@ def MakeTableDiff(action):
     return tableDiff
 
 def MakeCsvDiff(action):
-    csvDiff = CsvDiff(action)
+    csvDiff = CsvDiff(action + '_diff')
     if(action == 'types'):
-        csvDiff = CsvDiff(action, Converters.ConvertErrorTypeDiffDisplayMsg)
+        csvDiff = CsvDiff(action + '_diff', Converters.ConvertErrorTypeDiffDisplayMsg)
     elif(action == 'msgs'):
-        csvDiff = CsvDiff(action, MsgDiffDecorator.ConvertMsgDiffCsvFormat)
+        csvDiff = CsvDiff(action + '_diff', MsgDiffDecorator.ConvertMsgDiffCsvFormat)
     return csvDiff
 
 def DifferFactory(arguments, action):
@@ -169,3 +169,18 @@ def DifferFactory(arguments, action):
     if(action == 'msgs'):
         differ = MsgDiffDecorator(differ)
     return differ
+
+def DifferFactoryDecor(outFactory, diffFactory):
+    def __INTERNAL__(arguments, name):
+        differ = None
+        if(arguments.Destination != 'null' and arguments.Export == 'csv'):
+            differ = CompositeDiffClass([outFactory(name), diffFactory(name)])
+        elif(arguments.Export == 'csv'):
+            differ = diffFactory(name)
+        elif(arguments.Destination != 'null'):
+            differ = outFactory(name)
+        else:
+            exit()
+
+        return differ
+    return __INTERNAL__

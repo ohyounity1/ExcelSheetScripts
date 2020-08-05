@@ -27,3 +27,12 @@ def ConvertCSVOutput(name, data):
         rowString = f'{data}'
     return rowString
 
+def TableModuleValidationDataConverter(name, data):
+    if(name == 'SuggestedModules'):
+        return ','.join(data)
+    return data
+
+def CsvModuleValidationDataConverter(name, data):
+    if(name == 'SuggestedModules'):
+        return f'"{TableModuleValidationDataConverter(name, data)}"'
+    return data

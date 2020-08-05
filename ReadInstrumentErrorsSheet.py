@@ -16,7 +16,9 @@ from lib.DataSource import DataSources
 
 import Helper
 import DiffAnalyzers
+import DiffClasses
 import Converters
+import ValidationClasses
 
 # Program begins here, parse the command line options
 arguments = AppInitialization.ParseCommandLine()
@@ -43,7 +45,7 @@ if(len(arguments.Source) > 1):
     sourceCenters.append(DataSources.SourceCenter(SourceName=secondarySourceFile, SourceResults=secondarySourceResults))
 
 # Only display the source file contents to the output display IF NOT doing any diff/validation actions
-if(len(arguments.DiffActions) == 0):
+if(len(arguments.DiffActions) == 0 and len(arguments.ValidateActions) == 0):
     for sourceCenter in sourceCenters:
         with DataSources.ExportSources() as exportSources:
             sourceStrategies = list()
@@ -70,27 +72,6 @@ if(len(arguments.DiffActions) > 0 and secondarySourceResults != None):
 if(len(arguments.ValidateActions) > 0):
     for validation in arguments.ValidateActions:
         if(validation == ActionTypes.ValidateActions.MODULES):
-            validateList = []
-
-            if(Path(mainSourceFile).suffix == '.json'):
-                validateList = mainSourceResults
-            elif(Path(secondarySourceFile).suffix == '.json'):
-                validateList = secondarySourceResults
-
-            for ec in validateList:
-                errorCodeName = ec.ErrorName
-                errorCodeModule = ec.ErrorModule
-
-                if('HANDLER' in errorCodeName):
-                    if(errorCodeModule != 'PlateHandler'):
-                        print(f'Suggest making {errorCodeName} module be PlateHandler and not {errorCodeModule}')
-                elif('DG' in errorCodeName):
-                    if(errorCodeModule != 'DG'):
-                        print(f'Suggest making {errorCodeName} module be DG and not {errorCodeModule}')
-                elif('DR' in errorCodeName):
-                    if(errorCodeModule != 'DR'):
-                        print(f'Suggest making {errorCodeName} module be DR and not {errorCodeModule}')
-
-
-
-
+            
+            mainValidator = ValidationClasses.ValidatorFactory(mainSourceFile, secondarySourceFile, arguments, validation)
+            mainValidator.RunAnalysis(mainSourceResults, secondarySourceResults)
