@@ -66,7 +66,7 @@ class AppBehaviors:
 
 def AppFactory(arguments) -> AppBehaviors:
 	reportAndExportBehavior = ReportAndExportAppBehavior()
-	if(len(arguments.DiffActions) == 0 and len(arguments.ValidateActions) == 0 and len(arguments.JoinActions) == 0):
+	if(len(arguments.DiffActions) == 0 and len(arguments.ValidateActions) == 0 and not arguments.Join):
 		reportAndExportBehavior = StandardReportAndExportAppBehavior(StandardReportAppBehavior, StandardExportAppBehavior)
 
 	return AppBehaviors(reportAndExportBehavior)

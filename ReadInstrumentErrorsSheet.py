@@ -9,6 +9,7 @@ from lib.DataSource import DataSources
 
 from lib.Behaviors import DiffAnalyzers
 from lib.Behaviors import ValidationClasses
+from lib.Behaviors import JoinAnalyzers
 
 import AppInitialization
 import AppFactory
@@ -111,10 +112,9 @@ def main(arguments):
                 secondaryValidator = ValidationClasses.ValidatorFactory(sourceCenters[1].SourceName, arguments, validation, 2)
                 secondaryValidator(sourceCenters[1].SourceResults)
 
-    if(len(arguments.JoinActions) > 0 and secondarySourceResults != None):
-        for joinAction in arguments.JoinActions:
-            joiner = JoinAnalyzers.JoinFactory(mainSourceFile, secondarySourceFile, arguments, action)
-            joiner(mainSourceResults, secondarySourceResults)
+    if(arguments.Join and len(sourceCenters) > 1):
+        joiner = JoinAnalyzers.JoinAnalyzerFactory(sourceCenters[0].SourceName, sourceCenters[1].SourceName, arguments)
+        joiner(zip(sourceCenters[0].SourceResults, sourceCenters[1].SourceResults))
 
 if __name__ == '__main__':
     # test1.py executed as script

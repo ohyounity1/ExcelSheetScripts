@@ -38,6 +38,53 @@ class ValidationAnalyzer:
         self.__DIFF_DISPLAY__(diffs, msgHeaders)
 
 class ModuleTypesValidator(ValidationAnalyzer):
+    def ModuleSuggestionAlgorithm(errorCode):
+        def ANY(s, x):
+            return len([item for item in x if item in s]) > 0
+
+        def ALL(s, x):
+            return len([item for item in x if item in s]) == len(x)
+
+        modulesFoundInName = {
+            'InboxSlot': lambda s: ALL(s, ['ENTRY', 'HOTEL']) and ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']),
+            'OutboxSlot': lambda s: ALL(s, ['EXIT', 'HOTEL']) and ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']),
+            'RfidProbesOil1': lambda s: ALL(s, ['RFID', 'P1']),
+            'RfidProbesOil2': lambda s: ALL(s, ['RFID', 'P2']),
+            'RfidEvagreenOil1': lambda s: ALL(s, ['RFID', 'E1']),
+            'RfidEvagreenOil2': lambda s: ALL(s, ['RFID', 'E2']),
+            'RfidWaste1': lambda s: ALL(s, ['RFID', 'W1']),
+            'RfidWaste2': lambda s: ALL(s, ['RFID', 'W2']),
+            'RfidDrOil1': lambda s: ALL(s, ['RFID', 'D1']),
+            'RfidDrOil2': lambda s: ALL(s, ['RFID', 'D2']),
+            'BottleAndFanController': lambda s: 'BFC' in s or ALL(s, ['BOTTLE', 'AND', 'FAN', 'CONTROLLER']),
+            'FrontDoorRfid': lambda s: ALL(s, ['FRONT', 'DOOR', 'RFID']) or 'FrontDoorRfid' in s,
+            'Inbox': lambda s: ALL(s, ['ENTRY', 'HOTEL']),
+            'Outbox': lambda s: ALL(s, ['EXIT', 'HOTEL']),
+            'FrontDoor': lambda s: ALL(s, ['FRONT', 'DOOR']),
+            'Slot': lambda s: ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']) or ANY(s, ['Slot1', 'Slot2', 'Slot3', 'Slot4', 'Slot5']),
+            'PlateHandler': lambda s: 'HANDLER' in s or 'PlateHandler' in s or 'PH' in s,
+            'DG': lambda s: 'DG' in s,
+            'DR': lambda s: 'DR' in s and 'DROPLET_GENERATION' not in s,
+            'TC': lambda s: 'TC' in s and 'CATCH' not in s,
+            'Instrument': lambda s: 'CONTROLLER' in s,
+            'Bottles': lambda s: 'BOTTLE' in s or ALL(s, ['INSUFFICIENT', 'OIL']) or ALL(s, ['INSUFFICIENT', 'WASTE']),
+            'InboxDoor': lambda s: 'InboxDoor' in s,
+            'OutboxDoor': lambda s: 'OutboxDoor' in s,
+        }
+
+        errorCodeNameSplit = errorCode.split('_')
+
+        suggestionsForThisCode = []
+        for moduleName in modulesFoundInName:
+            if(modulesFoundInName[moduleName](errorCodeNameSplit)):
+                suggestionsForThisCode.append(moduleName)
+
+        if(len(suggestionsForThisCode) == 0):
+            Out.VerbosePrint(Out.Verbosity.LOW, f'{errorCode} had no found module suggestions... adding instrument to suggestion list as fallback')
+            suggestionsForThisCode.append('Instrument')
+
+        return suggestionsForThisCode
+
     def __RUN_ANALYZER__(self, source, showAll):
         Out.VerbosePrint(Out.Verbosity.MEDIUM, 'ModuleTypesValidator: __RUN_ANALYZER__')
         suggestions = []
@@ -53,49 +100,9 @@ class ModuleTypesValidator(ValidationAnalyzer):
             errorCodeName = ec.ErrorName
             errorCodeModule = ec.ErrorModule
 
-            def ANY(s, x):
-                return len([item for item in x if item in s]) > 0
-
-            def ALL(s, x):
-                return len([item for item in x if item in s]) == len(x)
-
-            modulesFoundInName = {
-                'InboxSlot': lambda s: ALL(s, ['ENTRY', 'HOTEL']) and ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']),
-                'OutboxSlot': lambda s: ALL(s, ['EXIT', 'HOTEL']) and ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']),
-                'RfidProbesOil1': lambda s: ALL(s, ['RFID', 'P1']),
-                'RfidProbesOil2': lambda s: ALL(s, ['RFID', 'P2']),
-                'RfidEvagreenOil1': lambda s: ALL(s, ['RFID', 'E1']),
-                'RfidEvagreenOil2': lambda s: ALL(s, ['RFID', 'E2']),
-                'RfidWaste1': lambda s: ALL(s, ['RFID', 'W1']),
-                'RfidWaste2': lambda s: ALL(s, ['RFID', 'W2']),
-                'RfidDrOil1': lambda s: ALL(s, ['RFID', 'D1']),
-                'RfidDrOil2': lambda s: ALL(s, ['RFID', 'D2']),
-                'BottleAndFanController': lambda s: 'BFC' in s or ALL(s, ['BOTTLE', 'AND', 'FAN', 'CONTROLLER']),
-                'FrontDoorRfid': lambda s: ALL(s, ['FRONT', 'DOOR', 'RFID']) or 'FrontDoorRfid' in s,
-                'Inbox': lambda s: ALL(s, ['ENTRY', 'HOTEL']),
-                'Outbox': lambda s: ALL(s, ['EXIT', 'HOTEL']),
-                'FrontDoor': lambda s: ALL(s, ['FRONT', 'DOOR']),
-                'Slot': lambda s: ANY(s, ['SLOT1', 'SLOT2', 'SLOT3', 'SLOT4', 'SLOT5']) or ANY(s, ['Slot1', 'Slot2', 'Slot3', 'Slot4', 'Slot5']),
-                'PlateHandler': lambda s: 'HANDLER' in s or 'PlateHandler' in s or 'PH' in s,
-                'DG': lambda s: 'DG' in s,
-                'DR': lambda s: 'DR' in s and 'DROPLET_GENERATION' not in s,
-                'TC': lambda s: 'TC' in s and 'CATCH' not in s,
-                'Instrument': lambda s: 'CONTROLLER' in s,
-                'Bottles': lambda s: 'BOTTLE' in s or ALL(s, ['INSUFFICIENT', 'OIL']) or ALL(s, ['INSUFFICIENT', 'WASTE']),
-                'InboxDoor': lambda s: 'InboxDoor' in s,
-                'OutboxDoor': lambda s: 'OutboxDoor' in s,
-            }
-
             errorCodeNameSplit = errorCodeName.split('_')
 
-            suggestionsForThisCode = []
-            for moduleName in modulesFoundInName:
-                if(modulesFoundInName[moduleName](errorCodeNameSplit)):
-                    suggestionsForThisCode.append(moduleName)
-
-            if(len(suggestionsForThisCode) == 0):
-                Out.VerbosePrint(Out.Verbosity.LOW, f'{errorCodeName} had no found module suggestions... adding instrument to suggestion list as fallback')
-                suggestionsForThisCode.append('Instrument')
+            suggestionsForThisCode = ModuleTypesValidator.ModuleSuggestionAlgorithm(errorCodeName)
 
             if(errorCodeModule in suggestionsForThisCode):
                 Out.VerbosePrint(Out.Verbosity.HIGH, f'{errorCodeName}: Good matching module type found {errorCodeModule}')
@@ -124,6 +131,20 @@ class HasMsgValidation:
     Message: str = ""
 
 class HasMsgValidator(ValidationAnalyzer):
+    def HasMsgAlgorithm(ec):
+        errorCodeName = ec.ErrorName
+        hasMsg = ec.ErrorDisplaysMsg
+        msg = ec.ErrorDisplayMsg
+
+        mismatch = False
+        if(hasMsg and len(msg) == 0):
+            mismatch = True
+            Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with msg, but the message is empty!')
+        elif(hasMsg == False and len(msg) > 0):
+            mismatch = True
+            Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with no msg, but the message is {msg}!')
+
+        return mismatch
     def __RUN_ANALYZER__(self, source, showAll):
         validations = []
         actualCount = 0
@@ -133,13 +154,7 @@ class HasMsgValidator(ValidationAnalyzer):
             hasMsg = ec.ErrorDisplaysMsg
             msg = ec.ErrorDisplayMsg
 
-            mismatch = False
-            if(hasMsg and len(msg) == 0):
-                mismatch = True
-                Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with msg, but the message is empty!')
-            elif(hasMsg == False and len(msg) > 0):
-                mismatch = True
-                Out.VerbosePrint(Out.Verbosity.MEDIUM, f'{errorCodeName}:   Code configured with no msg, but the message is {msg}!')
+            mismatch = HasMsgValidator.HasMsgAlgorithm(ec)
 
             if(self.Arguments.DiffShowAll or mismatch):
                 validations.append(HasMsgValidation(errorCodeName, hasMsg, hasMsg == False, msg))

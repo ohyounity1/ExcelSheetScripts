@@ -30,6 +30,8 @@ class ErrorType(IntEnum):
         return ErrorType(ErrorType.ASSISTANCE_NEEDED)
     def Warning():
         return ErrorType(ErrorType.WARNING)
+    def Unknown():
+        return ErrorType(ErrorType.UNKNOWN)
 
 @dataclass
 class ErrorCode:
