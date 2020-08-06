@@ -1,40 +1,21 @@
-from collections import namedtuple
+from dataclasses import dataclass
+from typing import Any
 
-from ..Constants import Constants
-from ..ErrorHandling import BadFileNameException
+from .ErrorCodeHandler import ErrorCodeHandler
+from .ErrorCodeHandler import ErrorCodeFilter
+
 from ..ErrorCodes import ErrorCode
-from ..Output import Out
 
-def RetrieveAllResults(retriever):
-    def __INTERNAL__(filePath):
+@dataclass
+class SourceCenter:
+    SourceName: str
+    SourceResults: [ErrorCode.ErrorCode]
 
-        Out.VerbosePrint(Out.Verbosity.LOW, 'Source File Name: {0}'.format(filePath))
-        errorCodes = retriever(filePath)
-
-        if(errorCodes is None or len(errorCodes) == 0):
-            Out.ErrorPrint('There were no error codes found in {}!'.format(filePath))
-
-        return errorCodes
-    return __INTERNAL__
-
-def RetrieveErrorCodes(conversion):
-    def __INTERNAL__(filePath):
-        allErrorCodes = []
-
-        if(filePath is not None):
-            Out.VerbosePrint(Out.Verbosity.LOW, 'Reading in error codes from file of type {}'.format(filePath))
-            conversion(filePath, allErrorCodes)
-            Out.VerbosePrint(Out.Verbosity.LOW, 'Read in {} error codes from source {}'.format(len(allErrorCodes), filePath))
-            return allErrorCodes
-    
-        raise BadFileNameException.BadFileNameException(extension)
-    return __INTERNAL__
-
-
-SourceCenter = namedtuple('SouceCenter', ['SourceName', 'SourceResults'])
-SourceStrategy = namedtuple('SourceStrategy', ['PrintHeader', 'HandleErrorCode', 'ConvertData'])
-
-
+@dataclass
+class SourceStrategy:
+    PrintHeader: Any
+    HandleErrorCode: Any
+    ConvertData: Any
 
 class ExportSources:
     def __init__(self):
@@ -47,4 +28,14 @@ class ExportSources:
         return self
     def __exit__(self, exc_type, exc_value, exc_stacktrace):
         [f.close() for f in self.ExportFiles]
+
+class SourceStrategyComposite:
+    def __init__(self, strategies):
+        self.Strategies = strategies
+    @ErrorCodeFilter
+    @ErrorCodeHandler
+    def __call__(self, sourceFile, errorCodes, selectedOrder):
+        for strategy in self.Strategies:
+            strategy.PrintHeader(f'Source Display for {sourceFile}')
+            strategy.HandleErrorCode(errorCodes, selectedOrder, strategy.ConvertData)    
 

@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from dataclasses import field
 
+from . import Out
+
 @dataclass
 class TreeProperty:
 	Name: str
@@ -26,9 +28,9 @@ def ErrorListToTreeDisplay(objects, properties, config=None, dataConverter=None)
 			if(dataConverter is not None):
 				propValue = dataConverter(p.Name, propValue)
 			if(p.ValueOnNextLevel):
-				print(f'{currentLevelMarker}{p.Name}:\n{currentLevelMarker + levelMarker}{propValue}')
+				Out.RegularPrint(f'{currentLevelMarker}{p.Name}:\n{currentLevelMarker + levelMarker}{propValue}')
 			else:
-				print(f'{currentLevelMarker}{p.Name}:{propValue}')
+				Out.RegularPrint(f'{currentLevelMarker}{p.Name}:{propValue}')
 			index += 1
 			if(len(p.Children) > 0):
 				unfinishedPreviousLevelProperties = list()

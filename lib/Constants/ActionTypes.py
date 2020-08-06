@@ -7,7 +7,6 @@ class DiffActions:
 
 class ValidateActions:
 	MODULES = 'modules'
-	MSG = 'msg'
 	HASMSG = 'hasmsg'
 	def Values():
-		return [ValidateActions.MODULES, ValidateActions.MSG, ValidateActions.HASMSG]
+		return [ValidateActions.MODULES, ValidateActions.HASMSG]

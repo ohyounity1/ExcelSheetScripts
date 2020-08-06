@@ -1,12 +1,8 @@
 from ..Constants import Constants
-
 from ..ErrorCodes import ErrorCode
-
-from ..Utility import Utility
-
 from ..Output import Out
 
-from . import DataSources
+from . import RetrieveMethods
 
 def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
     errorNameCol = None
@@ -22,7 +18,7 @@ def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
     ErrorCodeDisplayMsgHeader = 'User message'
 
     for column in range(0, sheet.ncols):
-        cellHeader = sheet.cell_value(Constants.HeaderRow, column)
+        cellHeader = sheet.cell_value(0, column)
         Out.VerbosePrint(Out.Verbosity.HIGH, 'Column Name: {}'.format(cellHeader))
         if(ErrorCodeNameHeader in cellHeader):
             errorNameCol = column
@@ -44,8 +40,8 @@ def __DefineKnownColumnLocations(sheet) -> (str, str, str, str, str):
         
     return (errorNameCol, errorIdCol, errorTypeCol, errorDisplaysMsgCol, errorDisplayMsgCol)
 
-@DataSources.RetrieveAllResults
-@DataSources.RetrieveErrorCodes
+@RetrieveMethods.RetrieveAllResults
+@RetrieveMethods.RetrieveErrorCodes
 def ExcelSheetErrorCodeListing(fileName, allErrorCodes) -> [ErrorCode.ErrorCode]:
     import xlrd 
 

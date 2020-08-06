@@ -3,7 +3,6 @@ from pathlib import Path
 from . import ExcelConversion
 from . import JsonConversion
 
-from . import DataSources
 __DataSources__ = {
     '.xls' : ExcelConversion.ExcelSheetErrorCodeListing,
     '.xlsx': ExcelConversion.ExcelSheetErrorCodeListing,

@@ -1,21 +1,14 @@
-MainSource = 0
-SecondarySource = 1
-
 ErrorSheet = 0
 
-HeaderRow = 0
+class MaxValues:
+	SourceArguments = 2
+	VerbosityLevel = 3
+	DisplayStringForTable = 20
 
-ColErrorNameIndex = 0
-ColErrorIdIndex = 1
-ColErrorTypeIndex = 2
-ColErrorDisplaysMsgIndex = 3
-ColErrorDisplayMsgIndex = 4
+class SupportedExtensions:
+	Excel = ['.xls' , '.xlsx']
+	Json = [ '.json' ]
 
-MaxSourceArguments = 2
-MaxDisplayStringForTable = 20
-
-SupportedExcelExtensions = ['.xls' , '.xlsx']
-SupportedJsonExtensions = [ '.json' ]
 UnknownModuleType = '<Module?>'
 
 PrivatePropertySuffix = '__'

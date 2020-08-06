@@ -1,14 +1,14 @@
-from lib.Output import Out
-from lib.DataSource import DataSources
-from lib.Utility import Utility
-from lib.Constants import Constants
-from lib.Constants import Destinations
+from ..Constants import Constants
+from ..Utility import Utility
+from ..Output import Out
 
-from lib.Output import TableDisplay
-from lib.Output import CsvDisplay
+def ErrorCodeFilter(errorCodeHandler):
+    def __INTERNAL__(object, sourceFile, errorCodes, arguments):
+        errorCodeHandler(object, sourceFile, [errorCode for errorCode in errorCodes if errorCode is not None], arguments)
+    return __INTERNAL__
+
 
 def ErrorCodeHandler(errorCodeHandlers):
-    errorCodeHandlersCaptures = errorCodeHandlers
     def __INTERNAL__(object, sourceFile, errorCodes, arguments):
         __DefaultRemoveFromSelection__ = {
            '.xls' : [Constants.ErrorModuleProperty],
@@ -30,17 +30,5 @@ def ErrorCodeHandler(errorCodeHandlers):
                 Constants.ErrorDisplayMsgProperty], lambda e: e not in __DefaultRemoveFromSelection__[extension])
         
         Out.VerbosePrint(Out.Verbosity.LOW, 'Items selected for display {}'.format(selectedOrder))
-        #for handlers in errorCodeHandlersCaptures:
-        #    handlers.PrintHeader(f'Source Display for {sourceFile}')
-        #    handlers.HandleErrorCode(errorCodes, selectedOrder, handlers.ConvertData)
         errorCodeHandlers(object, sourceFile, errorCodes, selectedOrder)
     return __INTERNAL__
-
-class SourceStrategyComposite:
-    def __init__(self, strategies):
-        self.Strategies = strategies
-    @ErrorCodeHandler
-    def Execute(self, sourceFile, errorCodes, selectedOrder):
-        for strategy in self.Strategies:
-            strategy.PrintHeader(f'Source Display for {sourceFile}')
-            strategy.HandleErrorCode(errorCodes, selectedOrder, strategy.ConvertData)    
