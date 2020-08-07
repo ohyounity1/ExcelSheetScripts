@@ -1,0 +1,535 @@
+Source Display for .\Instrument Errors.xlsx
+ErrorName,ErrorId,ErrorType,ErrorDisplaysMsg,ErrorDisplayMsg
+HANDLER_EJECTOR_FAILED,1,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_X_AXIS_FAILED,2,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_Y_AXIS_FAILED,3,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_Z_AXIS_FAILED,4,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_EJECTOR_RECOVERED,5,Warning,False,
+HANDLER_X_AXIS_RECOVERED,6,Warning,False,
+HANDLER_Y_AXIS_RECOVERED,7,Warning,False,
+HANDLER_Z_AXIS_RECOVERED,8,Warning,False,
+HANDLER_UNKNOWN_ERROR,9,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_NOT_CALIBRATED,10,ServiceCall,True,"The Plate Handler is out of calibration.  Please call Bio-Rad support to resolve the issue."
+HANDLER_EXTEND_FAILED,11,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_RETRACT_FAILED,12,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_LOAD_FAILED,13,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_UNLOAD_FAILED,14,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_NOT_INITIALIZED,15,ServiceCall,False,
+HANDLER_IN_ERROR_STATE,16,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+HANDLER_PLATE_MISSING,17,Warning,False,
+HANDLER_ASKED_TO_MOVE_OUT_OF_RANGE,18,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_HEAT_STAKER_ERROR,19,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_HEAT_STAKER_MOTION_ERROR,20,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_DROPLET_GENERATION_ERROR,21,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_HEAD_MOTION_ERROR,22,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_STAGE_MOTION_ERROR,23,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_PRESSURE_TIMEOUT_ERROR,24,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_VACUUM_TIMEOUT_ERROR,25,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_NO_PLATE_ERROR,26,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_NO_CATCH_ERROR,27,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_NO_RESPONCE_ERROR,28,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_NOT_VALID_CHIP_ERROR,29,AssistanceNeeded,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_TANK_FILL_ERROR,30,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_EMPTY_WASTE_ERROR,31,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_EMPTY_WASTE_DENIED,32,Warning,False,
+DG_BUSY,33,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DG_HEATER_ERROR,34,ServiceCall,False,
+DG_UNKNOWN_ERROR,35,ServiceCall,False,
+DR_DISCOVERY_FAILED,36,ServiceCall,True,"A Droplet Reader error has occurred. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+DR_STAGE_HOMING_AFTER_ERROR,37,ServiceCall,False,
+DR_STAGE_NOT_CALIBRATED,38,ServiceCall,True,"A Droplet Reader error has occurred. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+DR_DATA_RECEIVER_NOT_RUNNING,39,ServiceCall,False,
+DR_DETECTOR_LED_ERROR,40,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_NOT_ALL_BOARDS_REGISTERED,41,ServiceCall,True,"A Droplet Reader error has occurred. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+DR_CONFIG_INVALID,42,ServiceCall,True,"A Droplet Reader error has occurred. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+DR_MASTER_IN_ERROR,43,ServiceCall,False,
+DR_WAIT_FOR_READ_TIMEOUT,44,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_DETECTOR_IN_ERROR,45,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_FLUIDICS_IN_ERROR,46,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_PID_NOT_SETTLED_ERROR,47,ServiceCall,True,"A Droplet Reader error has occurred. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+DR_WASTE_BOTTLE_ERROR,48,ServiceCall,True,"A Droplet Reader error has occurred.  Please verify that the waste bottles have enough capacity available. Allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_DR_BOTTLE_ERROR,49,ServiceCall,True,"A Droplet Reader error has occurred.  Please verify that the DR oil bottles have enough capacity available. Allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+DR_UNKNOWN_ERROR,50,ServiceCall,False,
+TC_UART_MESSAGE_SENT_INTERRUPT_NOT_RECIEVED,51,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_UART_COMM_TIMEDOUT,52,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_UNKNOWN_UART_ERROR,53,ServiceCall,False,
+TC_LINK_ERROR_BAD_CALL,54,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_SEND,55,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_LT_CALL,56,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_RESP_TIMEOUT,57,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_RESP,58,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_SLAVE_STATUS,59,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_RTN_IDX,60,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_CMN_CHN,61,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_UNEXP_RESP,62,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BUSY_ERROR,63,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_ATTENTION_TO,64,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_SLAVE_ABORT,65,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_BAD_RCV,66,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_SLAVE_RCV,67,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LINK_ERROR_SLAVE_SEND,68,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_UNKNOWN_LINK_ERROR,69,ServiceCall,False,
+TC_RUNSTATE_ERROR_RUNNING,70,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_RUNSTATE_ERROR_PAUSED,71,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_RUNSTATE_ERROR_HOLD,72,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_RUNSTATE_ERROR_SELF_TEST,73,Warning,False,
+TC_RUNSTATE_ERROR_INCUBATE,74,Warning,False,
+TC_RUNSTATE_ERROR_ABORT,75,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_RUNSTATE_ERROR_INST_CHECK,76,Warning,False,
+TC_DOWNLOAD_FAILED_MESSAGE_LENGTH,77,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_DOWNLOAD_FAILED_LINK_STATUS,78,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_DOWNLOAD_FAILED_FUNC_ID,79,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_DOWNLOAD_FAILED_TIMEOUT,80,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_UNKNOWN_DOWNLOAD_FAILED,81,ServiceCall,False,
+LOCAL_CONTROLLER_TO_TC_DOWNLOAD_FAILED,82,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_INSTRUMENT_TO_LOCAL_CONTROLLER_FAILED,83,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_OPERATION_NOT_ALLOWED_ERROR,84,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_UNKNOWN_ERROR,85,ServiceCall,False,
+TC_LID_ERROR_NO_CHIP_DETECTED,86,ServiceCall,False,
+TC_LID_ERROR_CHIP_PLACEMENT,87,ServiceCall,False,
+TC_LID_UNKNOWN_ERROR,88,ServiceCall,False,
+TC_LID_AXIS_ERROR_FALTED,89,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_AXIS_ERROR_ENCODER_COUNT_DOES_NOT_MATCH_CSPIN,90,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_AXIS_ERROR_CSPIN_COUNT_DOES_NOT_MATCH_REQUESTED,91,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_AXIS_ERROR_TIMED_OUT,92,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_AXIS_UNKNOWN_ERROR,93,ServiceCall,False,
+TC_LID_ADC_BASED_MOTION_ERROR_ABORTED_ADC_CHANGED,94,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_ERROR_KILL_SWITCH_STOPPED_MOTOR,95,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_ERROR_NOT_ENOUGH_ADC_RANGE,96,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_ERROR_CSPIN_COUNT_DOES_NOT_MATCH_REQUESTED,97,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_ERROR_ENCODER_COUNT_DOES_NOT_MATCH_CSPIN_AT_BOTTOM,98,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_ERROR_ENCOUDER_COUNT_DOES_NOT_MATCH_CSPIN,99,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+TC_LID_ADC_BASED_MOTION_UNKNOWN_ERROR,100,ServiceCall,False,
+PLATE_RESOURCE_DG_MISSING,101,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_DG_IN_ERROR,102,ServiceCall,True,"A Droplet Generator error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_TC_MISSING,103,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_TC_IN_ERROR,104,ServiceCall,True,"A Thermal Cycler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_DR_MISSING,105,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_DR_IN_ERROR,106,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_PH_MISSING,107,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_PH_IN_ERROR,108,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+PLATE_RESOURCE_INSUFFICIENT_DG_EG_OIL,109,AssistanceNeeded,False,
+PLATE_RESOURCE_INSUFFICIENT_DG_PROBE_OIL,110,AssistanceNeeded,True,"There is not enough Droplet Generation Oil for Probes to run the loaded plates.  Please add an extra bottle or one with more oil."
+PLATE_RESOURCE_INSUFFICIENT_DR_OIL,111,AssistanceNeeded,True,"There is not enough Droplet Reader Oil to run the loaded plates.  Please add an extra bottle or one with more oil."
+PLATE_RESOURCE_INSUFFICIENT_WASTE,112,AssistanceNeeded,True,"There is not enough Waste Oil capacity to run the loaded plates.  Please add an extra bottle or one with more capacity."
+BOTTLE_MISPLACED_P1,113,AssistanceNeeded,True,"The bottle in Droplet Generation Oil for Probes position 1 is not recognised as a Droplet Generation Oil for Probes bottle.  Please try another bottle."
+BOTTLE_MISPLACED_P2,114,AssistanceNeeded,True,"The bottle in Droplet Generation Oil for Probes position 2 is not recognised as a Droplet Generation Oil for Probes bottle.  Please try another bottle."
+BOTTLE_MISPLACED_E1,115,AssistanceNeeded,False,
+BOTTLE_MISPLACED_E2,116,AssistanceNeeded,False,
+BOTTLE_MISPLACED_D1,117,AssistanceNeeded,True,"The bottle in Droplet Reader Oil position 1 is not recognised as a Droplet Reader Oil Bottle.  Please try another bottle."
+BOTTLE_MISPLACED_D2,118,AssistanceNeeded,True,"The bottle in Droplet Reader Oil position 2 is not recognised as a Droplet Reader Oil Bottle.  Please try another bottle."
+BOTTLE_MISPLACED_W1,119,AssistanceNeeded,True,"The bottle in Waste position 1 is not recognised as a waste bottle.  Please try another bottle."
+BOTTLE_MISPLACED_W2,120,AssistanceNeeded,True,"The bottle in Waste position 2 is not recognised as a waste bottle.  Please try another bottle."
+RFID_STATION_WRONG_PLATE_ID,121,AssistanceNeeded,False,
+RFID_STATION_READ_FAILED,122,AssistanceNeeded,False,
+RFID_STATION_WRITE_FAILED,123,AssistanceNeeded,False,
+ERROR_DR_DETECTOR_LED_DRIVE_V24V_OUT_OF_RANGE,124,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V5V_OUT_OF_RANGE,125,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V3p3_OUT_OF_RANGE,126,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V12V_OUT_OF_RANGE,127,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V5p6_OUT_OF_RANGE,128,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V4p65_OUT_OF_RANGE,129,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_V24_CURRENT_OUT_OF_RANGE,130,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_LOCAL_TEMP_OUT_OF_RANGE,131,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_REMOTE_TEMP_OUT_OF_RANGE,132,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_FAN_CURRENT_RED_OUT_OF_RANGE,133,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_FAN_CURRENT_GREEN_OUT_OF_RANGE,134,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_LED_RED_CURRENT_OUT_OF_RANGE,135,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_LED_GREEN_CURRENT_OUT_OF_RANGE,136,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_LED_RED_DRIVE_TEMP_OUT_OF_RANGE,137,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_LED_GREEN_DRIVE_TEMP_OUT_OF_RANGE,138,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_RED_FAN_LOCK_ERROR,139,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_CYAN_FAN_LOCK_ERROR,140,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_PID_UNSETTLED,141,ServiceCall,False,
+ERROR_DR_DETECTOR_LED_DRIVE_PID_FAILED_TIMEOUT,142,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_GREEN_LED_DAC_WARNING_LEVEL_REACHED,143,Warning,False,
+ERROR_DR_DETECTOR_LED_DRIVE_RED_LED_DAC_WARNING_LEVEL_REACHED,144,Warning,False,
+ERROR_DR_DETECTOR_LED_DRIVE_GREEN_LED_DAC_MAX_VALUE_REACHED,145,ServiceCall,False,
+ERROR_DR_DETECTOR_LED_DRIVE_RED_LED_DAC_MAX_VALUE_REACHED,146,ServiceCall,False,
+ERROR_DR_DETECTOR_LED_DRIVE_FAN_FAILURE_ERROR,147,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_CONFIGURATION_ERROR,148,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_DIGITAL_POT_ERROR,149,ServiceCall,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_DR_DETECTOR_LED_DRIVE_UNKNOWN_ERROR,150,ServiceCall,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_P1,151,AssistanceNeeded,True,"The information on Droplet Generator Probes bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_P2,152,AssistanceNeeded,True,"The information on Droplet Generator Probes bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_E1,153,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_E2,154,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_D1,155,AssistanceNeeded,True,"The information on Droplet Reader bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BAD_TAG_TYPE_D2,156,AssistanceNeeded,True,"The information on Droplet Reader bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_P1,157,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_P2,158,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_E1,159,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_E2,160,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_D1,161,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_TAG_D2,162,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_P1,163,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_P2,164,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_E1,165,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_E2,166,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_D1,167,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_BUS_ERROR_D2,168,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_P1,169,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_P2,170,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_E1,171,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_E2,172,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_D1,173,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TIMEOUT_D2,174,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_P1,175,AssistanceNeeded,True,"The information on Droplet Generation Oil for Probes bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_P2,176,AssistanceNeeded,True,"The information on Droplet Generation Oil for Probes bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_E1,177,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_E2,178,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_D1,179,AssistanceNeeded,True,"The information on Droplet Reader bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_D2,180,AssistanceNeeded,True,"The information on Droplet Reader bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_P1,181,AssistanceNeeded,True,"The information on Droplet Generation Oil for Probes bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_P2,182,AssistanceNeeded,True,"The information on Droplet Generation Oil for Probes bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_E1,183,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_E2,184,AssistanceNeeded,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_D1,185,AssistanceNeeded,True,"The information on Droplet Reader bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_D2,186,AssistanceNeeded,True,"The information on Droplet Reader bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_P1,187,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_P2,188,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_E1,189,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_E2,190,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_D1,191,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_UNKNOWN_ERROR_D2,192,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_P1,193,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_P2,194,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_E1,195,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_E2,196,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_D1,197,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_D2,198,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_P1,199,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_P2,200,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_E1,201,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_E2,202,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_D1,203,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_D2,204,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_P1,205,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_P2,206,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_E1,207,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_E2,208,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_D1,209,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_D2,210,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_1_BUS_DOWN,211,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_2_BUS_DOWN,212,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_3_BUS_DOWN,213,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_4_BUS_DOWN,214,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_5_BUS_DOWN,215,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_MODULE_6_BUS_DOWN,216,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_P1,217,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_P2,218,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_E1,219,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_E2,220,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_D1,221,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_D2,222,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_P1,223,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_P2,224,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_E1,225,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_E2,226,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_D1,227,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_D2,228,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_P1,229,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_P2,230,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_E1,231,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_E2,232,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_D1,233,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_D2,234,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_P1,235,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_P2,236,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_E1,237,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_E2,238,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_D1,239,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_ERROR_IS_HUNG_D2,240,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT1,277,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 1.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT2,278,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 2.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT3,279,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 3.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT4,280,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 4.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_SLOT_RESERVE_FAIL_SLOT5,281,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 5.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT1,282,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 1.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT2,283,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 2.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT3,284,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 3.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT4,285,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 4.  Please remove it."
+ERROR_CHASIS_ENTRY_HOTEL_UNEXPECTED_PLATE_SLOT5,286,AssistanceNeeded,True,"There is an unexpected plate in Inbox Slot 5.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BAD_TAG_TYPE_W1,287,AssistanceNeeded,True,"The information on Waste bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BAD_TAG_TYPE_W2,288,AssistanceNeeded,True,"The information on Waste bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_TAG_W1,289,AssistanceNeeded,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_TAG_W2,290,AssistanceNeeded,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BUS_ERROR_W1,291,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_BUS_ERROR_W2,292,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TIMEOUT_W1,293,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TIMEOUT_W2,294,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_W1,295,AssistanceNeeded,True,"The information on Waste bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RO_SECTION_W2,296,AssistanceNeeded,True,"The information on Waste bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_W1,297,AssistanceNeeded,True,"The information on Waste bottle 1 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_CORRUPT_RW_SECTION_W2,298,AssistanceNeeded,True,"The information on Waste bottle 2 could not be read successfully.  Please remove it and try another bottle."
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_UNKNOWN_ERROR_W1,299,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_UNKNOWN_ERROR_W2,300,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_W1,301,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE_W2,302,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_W1,303,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_FAILED_W2,304,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_W1,305,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT_W2,306,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_1_BUS_DOWN,307,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_MODULE_2_BUS_DOWN,308,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_W1,309,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_MODULE_POWER_W2,310,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_W1,311,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_RESETTING_I2C_PERIPHERAL_W2,312,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_W1,313,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_TALKING_TO_BOTTLE_LEDS_W2,314,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_IS_HUNG_W1,315,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_ERROR_IS_HUNG_W2,316,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT1,329,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 1.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT2,330,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 2.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT3,331,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 3.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT4,332,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 4.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_SLOT_RESERVE_FAIL_SLOT5,333,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 5.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT1,334,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 1.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT2,335,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 2.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT3,336,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 3.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT4,337,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 4.  Please remove it."
+ERROR_CHASIS_EXIT_HOTEL_UNEXPECTED_PLATE_SLOT5,338,AssistanceNeeded,True,"There is an unexpected plate in Outbox Slot 5.  Please remove it."
+ERROR_CHASIS_BFC_RFID_ERROR_BAD_TAG_TYPE,339,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_TAG,340,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_BUS_ERROR,341,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_TIMEOUT,342,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_RO_SECTION,343,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_CORRUPT_RW_SECTION,344,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_UNKNOWN_ERROR,359,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE,346,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_WRITE_DATA_FAILED,347,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT,348,Warning,False,
+ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_P1,360,ServiceCall,True,"An error has occurred when trying to select a Droplet Generation Oil for Probes bottle.  Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_P2,361,ServiceCall,True,"An error has occurred when trying to select a Droplet Generation Oil for Probes bottle.  Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_E1,362,ServiceCall,False,
+ERROR_CHASIS_BFC_ROTATOR_LOST_COMS_E2,363,ServiceCall,False,
+ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_P1,365,ServiceCall,True,"An error has occurred when trying to select a Droplet Generation Oil for Probes bottle.  Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_P2,366,ServiceCall,True,"An error has occurred when trying to select a Droplet Generation Oil for Probes bottle.  Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_E1,367,ServiceCall,False,
+ERROR_CHASIS_BFC_ROTATOR_TIMEOUT_E2,368,ServiceCall,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_P1,370,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_P2,371,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_E1,372,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_E2,373,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_D1,374,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_TIMEDOUT_D2,375,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_P1,382,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_P2,383,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_E1,384,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_E2,385,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_D1,386,Warning,False,
+ERROR_CHASIS_BFC_RFID_ERROR_SIGNAL_RECEIVED_D2,387,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_P1,388,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_P2,389,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_E1,390,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_E2,391,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_D1,392,Warning,False,
+ERROR_CHASIS_BFC_RFID_WRITE_FAILED_D2,393,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_P1,394,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_P2,395,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_E1,396,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_E2,397,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_D1,398,Warning,False,
+ERROR_CHASIS_BFC_RFID_READ_FAILED_D2,399,Warning,False,
+ERROR_CHASIS_BFC_DG_WASTE_OVER_TIME_RELEASED_W1,402,Warning,False,
+ERROR_CHASIS_BFC_DG_WASTE_OVER_TIME_RELEASED_W2,403,Warning,False,
+ERROR_CHASIS_BFC_DR_WASTE_OVER_TIME_RELEASED_W1,404,Warning,False,
+ERROR_CHASIS_BFC_DR_WASTE_OVER_TIME_RELEASED_W2,405,Warning,False,
+ERROR_CHASIS_BFC_WASTE_OVERFLOW_W1,406,AssistanceNeeded,True,"A waste overflow has occurred when pumping to waste bottle 1.  Please manually empty waste overflow reservoir from the waste removal port on the front of the instrument and replace waste bottle 1.  If the error re-occurs, please call service for assistance."
+ERROR_CHASIS_BFC_WASTE_OVERFLOW_W2,407,AssistanceNeeded,True,"A waste overflow has occurred when pumping to waste bottle 2.  Please manually empty waste overflow reservoir from the waste removal port on the front of the instrument and replace waste bottle 2.  If the error re-occurs, please call service for assistance."
+ERROR_CHASIS_BFC_WASTE_IN_ERROR_STATE_W1,408,Warning,False,
+ERROR_CHASIS_BFC_WASTE_IN_ERROR_STATE_W2,409,Warning,False,
+ERROR_CHASIS_BFC_WASTE_OVERFLOW_SENSOR_DETECTED,410,Warning,False,
+ERROR_CHASIS_BFC_V24V_OUT_OF_RANGE,412,Warning,False,
+ERROR_CHASIS_BFC_V5V_OUT_OF_RANGE,413,Warning,False,
+ERROR_CHASIS_BFC_V3p3V_OUT_OF_RANGE,414,Warning,False,
+ERROR_CHASIS_BFC_TEMP_OUT_OF_RANGE,415,Warning,False,
+ERROR_CHASIS_BFC_FAN_FAILURE_DG,416,ServiceCall,True,"An internal cooling error has occurred which might impact quality of the data.  Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_BFC_FAN_FAILURE_TC,417,ServiceCall,True,"An internal cooling error has occurred which might impact quality of the data.  Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_BFC_FAN_FAILURE_DR,418,ServiceCall,True,"An internal cooling error has occurred which might impact quality of the data.  Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_FRONT_DOOR_I24V_OUT_OF_RANGE,419,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_MOTOR_1_FAULT,420,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_MOTOR_2_FAULT,421,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_ENTRY_NOT_HOMED,557,AssistanceNeeded,False,"Entry DOOR Error."
+ERROR_CHASIS_FRONT_DOOR_EXIT_NOT_HOMED,558,AssistanceNeeded,False,"Exit Door Error"
+ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_TIMEOUT,422,AssistanceNeeded,True,"An inbox door move has failed.  Please try again and call service if it persists"
+ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_TIMEOUT,423,AssistanceNeeded,True,"An outbox door move has failed.  Please try again and call service if it persists."
+ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_OUT_OF_BOUNDS,424,AssistanceNeeded,True,"An inbox door move has failed.  Please try again and call service if it persists"
+ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_OUT_OF_BOUNDS,425,AssistanceNeeded,True,"An outbox door move has failed.  Please try again and call service if it persists."
+ERROR_CHASIS_FRONT_DOOR_ENTRY_DOOR_ERROR_DID_NOT_REACH_TARGET_POSITION,426,AssistanceNeeded,True,"An inbox door move has failed.  Please try again and call service if it persists"
+ERROR_CHASIS_FRONT_DOOR_EXIT_DOOR_ERROR_DID_NOT_REACH_TARGET_POSITION,427,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_BAD_TAG_TYPE,428,AssistanceNeeded,True,"An error has occurred while scanning the plate.  Please try a different plate.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_TAG,429,AssistanceNeeded,True,"An error has occurred while scanning the plate.  Please try a different plate.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_BUS_ERROR,430,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TIMEOUT,431,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_RO_SECTION,432,AssistanceNeeded,True,"An error has occurred while scanning the plate.  Please try a different plate.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_CORRUPT_RW_SECTION,433,AssistanceNeeded,True,"An error has occurred while scanning the plate.  Please try a different plate.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_UNKNOWN_ERROR,449,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_CHANGED_BEFORE_WRITE,435,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_WRITE_DATA_FAILED,436,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_WRITE_DATA_BUFFER_CORRUPT,437,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_RESETTING_MODULE_POWER,438,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_POWER_FAULT,439,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_I2C_RFID_BUS_DOWN,440,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_I2C_FRONT_LED_BUS_DOWN,441,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_RESETTING_I2C_PERIPHERAL,442,Warning,False,"Chassis front door RFID error, resetting I2C peripheral"
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_RETURNED_ERROR,443,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_UUID_SIZE_TOO_BIG,444,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_COMMAND_CORRUPT,445,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_MODULE_TIMED_OUT,446,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_TAG_ERROR_RFID_COMMAND_TOO_LONG,447,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_MODULE_IS_HALTED,448,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_ERROR_UNKNOWN_ERROR,449,Warning,False,
+ERROR_CHASIS_POWER_CAN_DIST_INTERLOCK_ACTIVE,450,ServiceCall,True,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_P1,451,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_P2,452,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_E1,453,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_E2,454,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_D1,455,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_RFID_INVALID_FW_VERSION_D2,456,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_INVALID_FW_VERSION_W1,457,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_RFID_INVALID_FW_VERSION_W2,458,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_RFID_INVALID_FW_VERSION,459,Warning,False,
+ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_RFID_INVALID_FW_VERSION,460,Warning,False,
+ERROR_MISSING_NODE_MASTER_PLACEHOLDER,461,Warning,False,
+ERROR_MISSING_NODE_INSTRUMENT_MASTER,462,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_AXIS_X,463,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_AXIS_Y,464,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_AXIS_Z,465,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_PISTON_PUMP_1,466,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_PISTON_PUMP_2,467,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_DETECTOR_LED_DRIVE,468,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_DR_FLUIDICS_CONTROLLER,469,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_BOTTLE_SWITCHING_VALVE_CONTROLLER,470,Warning,False,
+ERROR_MISSING_NODE_ENTRY_HOTEL,471,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_EXIT_HOTEL,472,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_POWER_CAN_DIST,473,ServiceCall,True,"A Communications error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_MISSING_NODE_BUS_SENTINEL,474,Warning,False,
+ERROR_DR_INSTRUMENT_MASTER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,475,Warning,False,
+ERROR_DR_AXIS_X_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,476,Warning,False,
+ERROR_DR_AXIS_Y_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,477,Warning,False,
+ERROR_DR_AXIS_Z_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,478,Warning,False,
+ERROR_DR_PISTON_PUMP_1_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,479,Warning,False,
+ERROR_DR_PISTON_PUMP_2_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,480,Warning,False,
+ERROR_DR_DETECTOR_LED_DRIVE_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,481,Warning,False,
+ERROR_DG_FLUIDICS_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,482,Warning,False,
+ERROR_DR_DETECTOR_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,483,Warning,False,
+ERROR_DR_FLUIDICS_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,484,Warning,False,
+ERROR_DG_LOCAL_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,485,Warning,False,
+ERROR_TC_LOCAL_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,486,Warning,False,
+ERROR_CHASIS_HANDLER_X_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,487,Warning,False,
+ERROR_CHASIS_HANDLER_Y_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,488,Warning,False,
+ERROR_CHASIS_HANDLER_Z_AXIS_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,489,Warning,False,
+ERROR_CHASIS_HANDLER_UNABLE_TO_CHECK_TC_FOR_PLATE,490,ServiceCall,True,"A Plate Handler error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_DG,491,ServiceCall,True,"A Plate Handler error has occurred while trying to remove a plate from the Droplet Generator.  Please turn off the instrument power, open the front panel and remove the plate manually.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_TC,492,ServiceCall,True,"A Plate Handler error has occurred while trying to remove a plate from the Thermal Cycler.  Please turn off the instrument power, open the front panel and remove the plate manually.  If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_HANDLER_UNABLE_TO_REMOVE_PLATE_FROM_DR,493,ServiceCall,True,"A Plate Handler error has occurred while trying to remove a plate from the Droplet Reader.  Please turn off the instrument power, open the front panel and remove the plate manually.  If the issue persists, please call Bio-Rad support."
+ERROR_TC_EJECTOR_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,494,Warning,False,
+ERROR_CHASIS_ENTRY_HOTEL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,495,Warning,False,
+ERROR_DR_MASTER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,496,Warning,False,
+ERROR_CHASIS_POWER_CAN_DIST_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,497,Warning,False,
+ERROR_CHASIS_EXIT_HOTEL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,498,Warning,False,
+ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,499,Warning,False,
+ERROR_CHASIS_FRONT_DOOR_BOARD_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,500,Warning,False,
+BUS_SENTINAL_DID_NOT_RESPOND_TO_HEARTBEAT_REQUEST,501,Warning,False,
+ERROR_DR_INSTRUMENT_MASTER_ASSERT_DETECTED,502,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_AXIS_X_ASSERT_DETECTED,503,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_AXIS_Y_ASSERT_DETECTED,504,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_AXIS_Z_ASSERT_DETECTED,505,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_PISTON_PUMP_1_ASSERT_DETECTED,506,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_PISTON_PUMP_2_ASSERT_DETECTED,507,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_DETECTOR_LED_DRIVE_ASSERT_DETECTED,508,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DG_FLUIDICS_CONTROLLER_ASSERT_DETECTED,509,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_DETECTOR_ASSERT_DETECTED,510,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_FLUIDICS_CONTROLLER_ASSERT_DETECTED,511,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DG_LOCAL_CONTROLLER_ASSERT_DETECTED,512,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_TC_LOCAL_CONTROLLER_ASSERT_DETECTED,513,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_HANDLER_X_AXIS_ASSERT_DETECTED,514,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_HANDLER_Y_AXIS_ASSERT_DETECTED,515,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_HANDLER_Z_AXIS_ASSERT_DETECTED,516,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_TC_EJECTOR_ASSERT_DETECTED,517,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_ENTRY_HOTEL_ASSERT_DETECTED,518,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_DR_MASTER_ASSERT_DETECTED,519,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_POWER_CAN_DIST_ASSERT_DETECTED,520,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_EXIT_HOTEL_ASSERT_DETECTED,521,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_ASSERT_DETECTED,522,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+ERROR_CHASIS_FRONT_DOOR_BOARD_ASSERT_DETECTED,523,ServiceCall,True,"A Control System error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. Please call Bio-Rad support to resolve the issue."
+BUS_SENTINAL_ASSERT_DETECTED,524,ServiceCall,False,
+ERROR_DR_INSTRUMENT_MASTER_BOOTLOADER_RUNNING,525,ServiceCall,False,
+ERROR_DR_AXIS_X_BOOTLOADER_RUNNING,526,ServiceCall,False,
+ERROR_DR_AXIS_Y_BOOTLOADER_RUNNING,527,ServiceCall,False,
+ERROR_DR_AXIS_Z_BOOTLOADER_RUNNING,528,ServiceCall,False,
+ERROR_DR_PISTON_PUMP_1_BOOTLOADER_RUNNING,529,ServiceCall,False,
+ERROR_DR_PISTON_PUMP_2_BOOTLOADER_RUNNING,530,ServiceCall,False,
+ERROR_DR_DETECTOR_LED_DRIVE_BOOTLOADER_RUNNING,531,ServiceCall,False,
+ERROR_DG_FLUIDICS_CONTROLLER_BOOTLOADER_RUNNING,532,ServiceCall,False,
+ERROR_DR_DETECTOR_BOOTLOADER_RUNNING,533,ServiceCall,False,
+ERROR_DR_FLUIDICS_CONTROLLER_BOOTLOADER_RUNNING,534,ServiceCall,False,
+ERROR_DG_LOCAL_CONTROLLER_BOOTLOADER_RUNNING,535,ServiceCall,False,
+ERROR_TC_LOCAL_CONTROLLER_BOOTLOADER_RUNNING,536,ServiceCall,False,
+ERROR_CHASIS_HANDLER_X_AXIS_BOOTLOADER_RUNNING,537,ServiceCall,False,
+ERROR_CHASIS_HANDLER_Y_AXIS_BOOTLOADER_RUNNING,538,ServiceCall,False,
+ERROR_CHASIS_HANDLER_Z_AXIS_BOOTLOADER_RUNNING,539,ServiceCall,False,
+ERROR_TC_EJECTOR_BOOTLOADER_RUNNING,540,ServiceCall,False,
+ERROR_CHASIS_ENTRY_HOTEL_BOOTLOADER_RUNNING,541,ServiceCall,False,
+ERROR_DR_MASTER_BOOTLOADER_RUNNING,542,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_BOOTLOADER_RUNNING,543,ServiceCall,False,
+ERROR_CHASIS_EXIT_HOTEL_BOOTLOADER_RUNNING,544,ServiceCall,False,
+ERROR_CHASIS_BOTTLE_AND_FAN_CONTROLLER_BOOTLOADER_RUNNING,545,ServiceCall,False,
+ERROR_CHASIS_FRONT_DOOR_BOARD_BOOTLOADER_RUNNING,546,ServiceCall,False,
+BUS_SENTINAL_BOOTLOADER_RUNNING,547,ServiceCall,False,
+HANDLER_LOCATION_CONFIG_NOT_VALID,548,ServiceCall,False,
+HANDLER_INVALID_AXIS,549,ServiceCall,False,
+HANDLER_INVALID_LOCATION,550,ServiceCall,False,
+HANDLER_SAVE_LOCATION_FAILED,551,ServiceCall,False,
+HANDLER_PLATE_DETECTED_BEFORE_GET_PLATE,552,ServiceCall,False,
+HANDLER_BUSY,553,ServiceCall,False,
+HANDLER_TIMEOUT,554,ServiceCall,False,
+HANDLER_PLATE_DETECTED_AFTER_DROP_OFF,555,ServiceCall,False,
+ERROR_MW_ASSERTED,556,ServiceCall,False,
+ERROR_CHASIS_FRONT_DOOR_ENTRY_NOT_HOMED,557,,False,
+ERROR_CHASIS_FRONT_DOOR_EXIT_NOT_HOMED,558,,False,
+ERROR_DR_INSTRUMENT_MASTER_CONNECTION_LOST,559,ServiceCall,False,
+DR_NO_PLATE,560,ServiceCall,False,
+ERROR_VERSIONS_DO_NOT_MATCH,561,ServiceCall,False,
+ERROR_DR_BULK_TRANSFER_PATH_LENGTH,562,AssistanceNeeded,True,
+ERROR_DR_BULK_TRANSFER_FILE_SIZE,563,AssistanceNeeded,True,
+ERROR_DR_BULK_TRANSFER_FILE_NOT_FOUND,564,AssistanceNeeded,True,
+ERROR_DR_BULK_TRANSFER_WELL_DATA_FAILED,565,AssistanceNeeded,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_DR_BULK_TRANSFER_PLATE_DATA_FAILED,566,AssistanceNeeded,True,"A Droplet Reader error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+ERROR_CHASIS_BFC_WASTE_OVERFLOW_LOWER_SENSOR_DETECTED,567,AssistanceNeeded,True,"Waste detected in the overflow reservoir. Please perform aspirate vent overflow procedure before adding new plates. This procedure can be performed while the instrument is processing plates.  If the issue persists, please call Bio-Rad support."
+ERROR_PLATE_RECOVERY_DATABASE_CORRUPTED,568,Warning,False,
+ERROR_CHASIS_BFC_WASTE_OVERFLOW_TOP_SENSOR_DETECTED,569,ServiceCall,True,
+ERROR_DR_WELL_ACQUISITION_TIMED_OUT,570,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_POWER_NOT_GOOD,571,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_AC_VOLTAGE_FAIL,572,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_OVER_TEMP,573,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_24V,574,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_ES,575,ServiceCall,False,
+ERROR_CHASIS_POWER_CAN_DIST_FAULT_SIG_TC,576,ServiceCall,False,
+ERROR_MISSING_NODE_HANDLER_X_AXIS,577,ServiceCall,False,
+ERROR_MISSING_NODE_HANDLER_Y_AXIS,578,ServiceCall,False,
+ERROR_MISSING_NODE_HANDLER_Z_AXIS,579,ServiceCall,False,
+ERROR_MISSING_NODE_TC_EJECTOR,580,ServiceCall,False,
+ERROR_DG_DG_LOCAL_CONTROLLER_HEATER_KILL_SWITCH_ACTIVE,581,ServiceCall,False,
+ERROR_DG_DG_LOCAL_CONTROLLER_HEATER_TIMEOUT,582,ServiceCall,False,
+ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_ERROR,583,ServiceCall,False,
+ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_1_ERROR,584,ServiceCall,False,
+ERROR_DG_DG_LOCAL_CONTROLLER_THERMOCOUPLE_2_ERROR,585,ServiceCall,False,
+ERROR_DG_DG_Master_DG_IN_ERROR_STATE,586,ServiceCall,False,
+ERROR_CHASIS_HANDLER_MOTION_FAILED,587,ServiceCall,False,
+ERROR_TC_TC_LOCAL_CONTROLLER_TC_ERROR,588,ServiceCall,False,
+UnknownSubmoduleError,1499,ServiceCall,True,"An instrument error has occurred.  Please allow the current runs to complete, if possible.  Then power cycle the instrument and try again.  If the issue persists, please call Bio-Rad support."
+InvalidInstrumentSerialNumbers,1501,ServiceCall,True,"Invalid instrument serial numbers. Power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_DG_UnknownError,1502,ServiceCall,True,"A Droplet Generator error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_TC_UnknownError,1503,ServiceCall,True,"A Thermal cycler error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_DR_UnknownError,1504,ServiceCall,True,"A Droplet Reader error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_PlateHandler_UnknownError,1505,ServiceCall,True,"A Plate Handler error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_InboxDoor_UnknownError,1506,ServiceCall,True,"Power cycle the instrument, push the doors slowly in a couple of inches and power on the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_OutboxDoor_UnknownError,1507,ServiceCall,True,"Power cycle the instrument, push the doors slowly in a couple of inches and power on the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_Instrument_UnknownError,1508,,True,"An Instrument error has occurred. Please allow the current runs to complete, if possible. Then power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_Instrument_Offline,1509,,True,"Instrument connection has been lost.Please power cycle the instrument and try again. If the issue persists, please call Bio-Rad support."
+SW_InvalidFwVersion,1510,ServiceCall,False,
+SW_TimeoutWaitingForResponseFromFW,1511,,False,
+SoftwareError,1999,,True,"Software Error, exception caught. Some data might be usable.View the Event log for recent software exceptions and report to Bio-Rad support."

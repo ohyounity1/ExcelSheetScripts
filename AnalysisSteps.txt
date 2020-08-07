@@ -1,0 +1,17 @@
+
+1) Copy the 5 columns from the original sheet into a new sheet
+2) Filter out and delete all empty rows and rows with no data
+3) Run the script to convert the json file to .csv
+4) Convert the CSV to .xlsx by opening and saving file in Excel
+5) The error codes are in the same relative order, so copy these into the original spreadsheet so they can be diffed
+6) Run the formulas below:
+
+
+highlight duplicate cells (does not need formula, can do with Excel directly)
+highlight different codes: =COUNTIF($A:$A,B2)=0
+clean up error type: =(SUBSTITUTE(K2, " ", "")<>L2
+Checking text on user messages: =SUBSTITUTE(CLEAN(I1), " ", "")<>SUBSTITUTE(CLEAN(K1), " ", "")
+
+Run macro to generate the suggested modules within Excel
+
+Comparing selected module with suggested list =IF(ISERROR(SEARCH($D1, $E1)), FALSE, TRUE)

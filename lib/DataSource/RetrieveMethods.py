@@ -10,16 +10,7 @@ def RetrieveAllResults(retriever):
         if(errorCodes is None or len(errorCodes) == 0):
             Out.ErrorPrint('There were no error codes found in {}!'.format(filePath))
 
-        filteredList = []
-
-        for ec in errorCodes:
-            if(ec not in filteredList):
-                filteredList.append(ec)
-            else:
-                Out.VerbosePrint(Out.Verbosity.LOW, f'Filtering out error code {ec} since it appears to be repeating!')
-
-        Out.VerbosePrint(Out.Verbosity.LOW, 'Read in {} error codes from source {} after filtering'.format(len(filteredList), filePath))
-        return filteredList
+        return errorCodes
     return __INTERNAL__
 
 def RetrieveErrorCodes(conversion):
